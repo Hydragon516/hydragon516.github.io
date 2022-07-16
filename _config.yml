@@ -81,6 +81,10 @@ content:
         - **Minhyeok Lee**, Sangwon Hwang, Chaewon Park, Sangyoun Lee
       * **FastAno: Fast Anomaly Detection via Spatio-temporal Patch Transformation (WACV 2022)** <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Park_FastAno_Fast_Anomaly_Detection_via_Spatio-Temporal_Patch_Transformation_WACV_2022_paper.pdf">[Paper]</a>
         - Chaewon Park, MyeongAh Cho, **Minhyeok Lee**, Sangyoun Lee
+      * **Multi-level Feature maps Attention for Monocular Depth Estimation (ICCE-Asia 2021)** <a href="https://ieeexplore.ieee.org/document/9641955">[Paper]</a>
+        - Seunghoon Lee, **Minhyeok Lee**, Sangyoun Lee
+      * **Regularization Strategy for Point Cloud via Rigidly Mixed Sample (CVPR 2021)** <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Lee_Regularization_Strategy_for_Point_Cloud_via_Rigidly_Mixed_Sample_CVPR_2021_paper.pdf">[Paper]</a> <a href="https://github.com/dogyoonlee/RSMix">[Code]</a>
+        - Dogyoon Lee, Jaeha Lee, Junhyeop Lee, Hyeongmin Lee, **Minhyeok Lee**, Sungmin Woo, Sangyoun Lee
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
