@@ -116,8 +116,9 @@ content:
         link: http://mvp.yonsei.ac.kr
         quote: >
           Image and Video Pattern Recognition Lab
-        # description: | # this will include new lines to allow paragraphs
-        #   Description of role
+        description: |
+          * Studied single image lane detection.
+          * Studied monocular depth estimation.
   - title: Education
     layout: list
     content:
