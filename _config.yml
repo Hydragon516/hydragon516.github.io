@@ -65,21 +65,9 @@ about_content: | # this will include new lines to allow paragraphs
 
 content:
   - title: Publication
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        border: weak
-        title: Robust Lane Detection via Expanded Self Attention (WACV 2022)
-        link: https://openaccess.thecvf.com/content/WACV2022/papers/Lee_Robust_Lane_Detection_via_Expanded_Self_Attention_WACV_2022_paper.pdf
-        link_text: Paper Link
-        additional_links:
-          - title: Code
-            icon: fab fa-github
-            url: https://github.com/Hydragon516/ESA-official
-#         quote: >
-#           Short overview of the project (optional)
-#         description: | # this will include new lines to allow paragraphs
-#           Description about the work on/with the project
+    layout: text
+    content: |
+      # Robust Lane Detection via Expanded Self Attention (WACV 2022) <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Lee_Robust_Lane_Detection_via_Expanded_Self_Attention_WACV_2022_paper.pdf">[Paper]</a> <a href="https://github.com/Hydragon516/ESA-official">[Code]</a>
           
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
