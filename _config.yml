@@ -67,8 +67,8 @@ content:
   - title: Publication
     layout: text
     content: |
-      * Robust Lane Detection via Expanded Self Attention (WACV 2022) <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Lee_Robust_Lane_Detection_via_Expanded_Self_Attention_WACV_2022_paper.pdf">[Paper]</a> <a href="https://github.com/Hydragon516/ESA-official">[Code]</a>
-          
+      * **Robust Lane Detection via Expanded Self Attention (WACV 2022)** <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Lee_Robust_Lane_Detection_via_Expanded_Self_Attention_WACV_2022_paper.pdf">[Paper]</a> <a href="https://github.com/Hydragon516/ESA-official">[Code]</a>
+      ** **Minhyeok Lee**, Junhyeop Lee, Dogyoon Lee, Woojin Kim, Sangwon Hwang, Sangyoun Lee    
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
