@@ -137,8 +137,8 @@ content:
         caption: Mar 2017 - Feb 2021
         # quote: >
         #   Short institution or course description (optional)
-        description: |
-          Got a 2017 Academic Achievement Award.
+        # description: |
+        #   Got a 2017 Academic Achievement Award.
       - layout: top-right
         title: Hansung Science High School
         sub_title: Physics
