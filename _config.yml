@@ -115,10 +115,19 @@ content:
         caption: July 2020 - present
         link: http://mvp.yonsei.ac.kr
         quote: >
-          Image and Video Pattern Recognition Lab
+          Image and Video Pattern Recognition Laboratory at Yonsei University
         description: |
-          * Studied single image lane detection.
-          * Studied monocular depth estimation.
+          Image and Video Pattern Recognition Laboratory at Yonsei University
+      - layout: right
+        title: OISL.
+        sub_title: Undergraduate Intern
+        caption: Jun 2019 - Dec 2019
+        link: https://sites.google.com/yonsei.ac.kr/oisl
+        quote: >
+          Optical Imaging Systems Laboratory
+        description: |
+          Optical Imaging Systems Laboratory at Yonsei University
+
   - title: Education
     layout: list
     content:
