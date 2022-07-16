@@ -132,13 +132,21 @@ content:
     layout: list
     content:
       - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
+        title: Yonsei University
+        sub_title: B.S. in Electrical and Electronic Engineering
+        caption: Mar 2017 - Feb 2021
+        # quote: >
+        #   Short institution or course description (optional)
+        description: |
+          Got a 2017 Academic Achievement Award.
+      - layout: top-right
+        title: Hansung Science High School
+        sub_title: Physics
+        caption: Mar 2014 - Feb 2017
+        # quote: >
+        #   Short institution or course description (optional)
+        # description: |
+        #   Got a 2017 Academic Achievement Award.
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
