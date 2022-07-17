@@ -35,9 +35,9 @@ googlescholar_username: WGchT7cAAAAJ
 
 # Additional icon links
 # additional_links:
-# - title: Link name
-#   icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
+- title: Blog
+  icon: fa-blogger
+  url: https://hydragon-cv.info
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -110,7 +110,7 @@ content:
     layout: list
     content:
       - layout: right
-        title: MVP Lab.
+        title: MVP Lab
         sub_title: Integrated M.S/Ph.D Student
         caption: July 2020 - present
         link: http://mvp.yonsei.ac.kr
@@ -119,14 +119,25 @@ content:
         description: |
           Image and Video Pattern Recognition Laboratory at Yonsei University
       - layout: right
-        title: OISL.
+        title: OISL
         sub_title: Undergraduate Intern
         caption: Jun 2019 - Dec 2019
         link: https://sites.google.com/yonsei.ac.kr/oisl
         # quote: >
         #   Optical Imaging Systems Laboratory
         description: |
-          Optical Imaging Systems Laboratory at Yonsei University
+          Optical Imaging Systems Laboratory at Yonsei University'
+      - layout: right
+        title: SBTM
+        sub_title: Software Engineer
+        caption: 2018 - Feb 2021
+        link: https://sbtmlab.club
+        # quote: >
+        #   Image and Video Pattern Recognition Laboratory at Yonsei University
+        description: |
+           Robot Club in Yonsei Unive
+            - Implemented GPS and LiDAR algorithms for autonomous vehicles.
+            - Development of driving assistance algorithms for autonomous vehicles.
 
   - title: Education
     layout: list
