@@ -36,7 +36,7 @@ googlescholar_username: WGchT7cAAAAJ
 # Additional icon links
 additional_links:
   - title: Blog
-    icon: fa-blogger
+    icon: fa-blog
     url: https://hydragon-cv.info
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
@@ -158,12 +158,13 @@ content:
         #   Short institution or course description (optional)
         # description: |
         #   Got a 2017 Academic Achievement Award.
-  - title: A Little More About Me
+  - title: Honors & Awards
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      * __Second Prize__, PAMS 2018 (2020)
+      * __ACE Lab Special Prize__, SMCC 2019 - Smart Model Car Contest (2019)
+      * __First Prize__, PAMS 2018 (2018)
+      * __First Prize__, Yonsei - Nexon √i RC Creative Platform (2017)
 
 # Footer
 footer_show_references: true
