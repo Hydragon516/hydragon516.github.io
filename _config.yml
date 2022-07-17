@@ -55,6 +55,13 @@ about_content: | # this will include new lines to allow paragraphs
   I am an integrated M.S/Ph.D student of computer vision at Yonsei University. I am interested in exploring <mark>Computer Vision</mark>, <mark>Semantic Segmentation</mark> and <mark>Autonomous Vehicle</mark>.
   
   To know more about me, please check out my CV or visit my <a href="https://github.com/Hydragon516">Github</a>.
+
+  * Programming Languages
+    - Python, C/C++, MATLAB
+  * Deep Learning Libraries
+    - Pytorch, Tensorflow
+  * Available Languages
+    - Korean, English
 # Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
 
 # You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
@@ -118,6 +125,7 @@ content:
         #   Image and Video Pattern Recognition Laboratory at Yonsei University
         description: |
           Image and Video Pattern Recognition Laboratory at Yonsei University
+            - Development of semi-supervised learning algorithm for lidar point cloud learning with HYUNDAI MOTORS.
       - layout: right
         title: OISL
         sub_title: Undergraduate Intern
@@ -127,6 +135,7 @@ content:
         #   Optical Imaging Systems Laboratory
         description: |
           Optical Imaging Systems Laboratory at Yonsei University
+            - Development of high-speed camera based on lensless camera.
       - layout: right
         title: SBTM
         sub_title: Software Engineer
