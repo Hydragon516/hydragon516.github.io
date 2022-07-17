@@ -126,7 +126,7 @@ content:
         # quote: >
         #   Optical Imaging Systems Laboratory
         description: |
-          Optical Imaging Systems Laboratory at Yonsei University'
+          Optical Imaging Systems Laboratory at Yonsei University
       - layout: right
         title: SBTM
         sub_title: Software Engineer
@@ -135,7 +135,7 @@ content:
         # quote: >
         #   Image and Video Pattern Recognition Laboratory at Yonsei University
         description: |
-           Robot Club in Yonsei Unive
+           Robot Club in Yonsei University
             - Implemented GPS and LiDAR algorithms for autonomous vehicles.
             - Development of driving assistance algorithms for autonomous vehicles.
 
