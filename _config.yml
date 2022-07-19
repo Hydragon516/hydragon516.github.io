@@ -74,7 +74,7 @@ content:
   - title: Publication
     layout: text
     content: |
-      * **SPSN: Superpixel Prototype Sampling Network for RGB-D Salient Object Detection (ECCV 2022)** <a href="https://github.com/Hydragon516/SPSN">[Code]</a>
+      * **SPSN: Superpixel Prototype Sampling Network for RGB-D Salient Object Detection (ECCV 2022)** <a href="https://arxiv.org/pdf/2207.07898.pdf">[Paper]</a> <a href="https://github.com/Hydragon516/SPSN">[Code]</a>
         - __Minhyeok Lee\*__, Chaewon Park\*, Suhwan Cho, Sangyoun Lee
       * **Tackling Background Distraction in Video Object Segmentation (ECCV 2022)** <a href="https://arxiv.org/pdf/2207.06953.pdf">[Paper]</a> <a href="https://github.com/suhwan-cho/TBD">[Code]</a>
         - Suhwan Cho, Heansung Lee, **Minhyeok Lee**, Chaewon Park, Sungjun Jang, Minjung Kim, Sangyoun Lee
