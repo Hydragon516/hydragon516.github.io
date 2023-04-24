@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: hydragon516.github.io/sitemap.xml
+Sitemap: https://hydragon516.github.io/sitemap.xml
