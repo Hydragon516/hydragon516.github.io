@@ -23,7 +23,6 @@
       description:
         - Electrical and Electronic Engineering
     - title: Hansung Science High School
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
       year: 2014 ~ 2017
 
 - title: Experience
@@ -49,37 +48,22 @@
       - Implemented GPS and LiDAR algorithms for autonomous vehicles
       - Development of driving assistance algorithms for autonomous vehicles
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Medical Image Processing Competition (Fisrt Prize)
+    - year: 2020
       items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
+        - PAMS 2020 (Second Prize)
+    - year: 2019
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - International Student Car Competition (Fifth Prize)
+        - SMCC 2019 - Smart Model Car Contest (ACE Lab Special Prize)
+    - year: 2018
+      items: 
+        - PAMS 2018 (First Prize)
+    - year: 2017
+      items: 
+        - Yonsei-Nexon √i RC Creative Platform (First Prize)
