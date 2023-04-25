@@ -24,68 +24,6 @@
   abstract={The image-based lane detection algorithm is one of the key technologies in autonomous vehicles. Modern deep learning methods achieve high performance in lane detection, but it is still difficult to accurately detect lanes in challenging situations such as congested roads and extreme lighting conditions. To be robust on these challenging situations, it is important to extract global contextual information even from limited visual cues. In this paper, we propose a simple but powerful self-attention mechanism optimized for lane detection called the Expanded Self Attention (ESA) module. Inspired by the simple geometric structure of lanes, the proposed method predicts the confidence of a lane along the vertical and horizontal directions in an image. The prediction of the confidence enables estimating occluded locations by extracting global contextual information. ESA module can be easily implemented and applied to any encoder-decoder-based model without increasing the inference time. The performance of our method is evaluated on three popular lane detection benchmarks (TuSimple, CULane and BDD100K). We achieve state-of-the-art performance in CULane and BDD100K and distinct improvement on TuSimple dataset. The experimental results show that our approach is robust to occlusion and extreme lighting conditions.}
 }
 
-@inproceedings{lee2022spsn,
-  selected={true},
-  abbr={ECCV},
-  title={Spsn: Superpixel prototype sampling network for rgb-d salient object detection},
-  author={Lee, Minhyeok and Park, Chaewon and Cho, Suhwan and Lee, Sangyoun},
-  booktitle={Computer Vision--ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23--27, 2022, Proceedings, Part XXIX},
-  pages={630--647},
-  year={2022},
-  organization={Springer},
-  arxiv={2207.07898},
-  code={https://github.com/Hydragon516/SPSN},
-  abstract={RGB-D salient object detection (SOD) has been in the spotlight recently because it is an important preprocessing operation for various vision tasks. However, despite advances in deep learning-based methods, RGB-D SOD is still challenging due to the large domain gap between an RGB image and the depth map and low-quality depth maps. To solve this problem, we propose a novel superpixel prototype sampling network (SPSN) architecture. The proposed model splits the input RGB image and depth map into component superpixels to generate component prototypes. We design a prototype sampling network so that the network only samples prototypes corresponding to salient objects. In addition, we propose a reliance selection module to recognize the quality of each RGB and depth feature map and adaptively weight them in proportion to their reliability. The proposed method makes the model robust to inconsistencies between RGB images and depth maps and eliminates the influence of non-salient objects. Our method is evaluated on five popular datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed method through comparative experiments.}
-}
-
-@inproceedings{park2022fastano,
-  selected={true},
-  abbr={WACV},
-  title={FastAno: Fast anomaly detection via spatio-temporal patch transformation},
-  author={Park, Chaewon and Cho, MyeongAh and Lee, Minhyeok and Lee, Sangyoun},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={2249--2259},
-  year={2022},
-  arxiv={2106.08613},
-  abstract={Video anomaly detection has gained significant attention due to the increasing requirements of automatic monitoring for surveillance videos. Especially, the prediction based approach is one of the most studied methods to detect anomalies by predicting frames that include abnormal events in the test set after learning with the normal frames of the training set. However, a lot of prediction networks are computationally expensive owing to the use of pre-trained optical flow networks, or fail to detect abnormal situations because of their strong generative ability to predict even the anomalies. To address these shortcomings, we propose spatial rotation transformation (SRT) and temporal mixing transformation (TMT) to generate irregular patch cuboids within normal frame cuboids in order to enhance the learning of normal features. Additionally, the proposed patch transformation is used only during the training phase, allowing our model to detect abnormal frames at fast speed during inference. Our model is evaluated on three anomaly detection benchmarks, achieving competitive accuracy and surpassing all the previous works in terms of speed.}
-}
-
-@article{lee2022hierarchically,
-  abbr={arXiv},
-  title={Hierarchically Decomposed Graph Convolutional Networks for Skeleton-Based Action Recognition},
-  author={Lee, Jungho and Lee, Minhyeok and Lee, Dogyoon and Lee, Sangyoon},
-  journal={arXiv preprint arXiv:2208.10741},
-  year={2022},
-  arxiv={2208.10741},
-  code={https://github.com/Jho-Yonsei/HD-GCN},
-  abstract={Graph convolutional networks (GCNs) are the most commonly used methods for skeleton-based action recognition and have achieved remarkable performance. Generating adjacency matrices with semantically meaningful edges is particularly important for this task, but extracting such edges is challenging problem. To solve this, we propose a hierarchically decomposed graph convolutional network (HD-GCN) architecture with a novel hierarchically decomposed graph (HD-Graph). The proposed HD-GCN effectively decomposes every joint node into several sets to extract major structurally adjacent and distant edges, and uses them to construct an HD-Graph containing those edges in the same semantic spaces of a human skeleton. In addition, we introduce an attention-guided hierarchy aggregation (A-HA) module to highlight the dominant hierarchical edge sets of the HD-Graph. Furthermore, we apply a new six-way ensemble method, which uses only joint and bone stream without any motion stream. The proposed model is evaluated and achieves state-of-the-art performance on three large, popular datasets: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA. Finally, we demonstrate the effectiveness of our model with various comparative experiments.}
-}
-
-@inproceedings{lee2022edgeconv,
-  selected={true},
-  abbr={WACV},
-  title={Edgeconv with attention module for monocular depth estimation},
-  author={Lee, Minhyeok and Hwang, Sangwon and Park, Chaewon and Lee, Sangyoun},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={2858--2867},
-  year={2022},
-  arxiv={2106.08615},
-  abstract={Monocular depth estimation is an especially important task in robotics and autonomous driving, where 3D structural information is essential. However, extreme lighting conditions and complex surface objects make it difficult to predict depth in a single image. Therefore, to generate accurate depth maps, it is important for the model to learn structural information about the scene. We propose a novel Patch-Wise EdgeConv Module (PEM) and EdgeConv Attention Module (EAM) to solve the difficulty of monocular depth estimation. The proposed modules extract structural information by learning the relationship between image patches close to each other in space using edge convolution. Our method is evaluated on two popular datasets, the NYU Depth V2 and the KITTI Eigen split, achieving state-of-the-art performance. We prove that the proposed model predicts depth robustly in challenging scenes through various comparative experiments.}
-}
-
-@inproceedings{cho2023treating,
-  selected={true},
-  abbr={WACV},
-  title={Treating motion as option to reduce motion dependency in unsupervised video object segmentation},
-  author={Cho, Suhwan and Lee, Minhyeok and Lee, Seunghoon and Park, Chaewon and Kim, Donghyeong and Lee, Sangyoun},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={5140--5149},
-  year={2023},
-  arxiv={2209.03138},
-  code={https://github.com/suhwan-cho/tmo},
-  abstract={Unsupervised video object segmentation (VOS) aims to detect the most salient object in a video sequence at the pixel level. In unsupervised VOS, most state-of-the-art methods leverage motion cues obtained from optical flow maps in addition to appearance cues to exploit the property that salient objects usually have distinctive movements compared to the background. However, as they are overly dependent on motion cues, which may be unreliable in some cases, they cannot achieve stable prediction. To reduce this motion dependency of existing two-stream VOS methods, we propose a novel motion-as-option network that optionally utilizes motion cues. Additionally, to fully exploit the property of the proposed network that motion is not always required, we introduce a collaborative network learning strategy. On all the public benchmark datasets, our proposed network affords state-of-the-art performance with real-time inference speed.}
-}
-
 @inproceedings{lee2023unsupervised,
   selected={true},
   abbr={WACV},
@@ -164,6 +102,68 @@
   year={2023},
   arxiv={2303.08314},
   abstract={Unsupervised video object segmentation aims to segment the most prominent object in a video sequence. However, the existence of complex backgrounds and multiple foreground objects make this task challenging. To address this issue, we propose a guided slot attention network to reinforce spatial structural information and obtain better foreground--background separation. The foreground and background slots, which are initialized with query guidance, are iteratively refined based on interactions with template information. Furthermore, to improve slot--template interaction and effectively fuse global and local features in the target and reference frames, K-nearest neighbors filtering and a feature aggregation transformer are introduced. The proposed model achieves state-of-the-art performance on two popular datasets. Additionally, we demonstrate the robustness of the proposed model in challenging scenes through various comparative experiments.}
+}
+
+@inproceedings{lee2022spsn,
+  selected={true},
+  abbr={ECCV},
+  title={Spsn: Superpixel prototype sampling network for rgb-d salient object detection},
+  author={Lee, Minhyeok and Park, Chaewon and Cho, Suhwan and Lee, Sangyoun},
+  booktitle={Computer Vision--ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23--27, 2022, Proceedings, Part XXIX},
+  pages={630--647},
+  year={2022},
+  organization={Springer},
+  arxiv={2207.07898},
+  code={https://github.com/Hydragon516/SPSN},
+  abstract={RGB-D salient object detection (SOD) has been in the spotlight recently because it is an important preprocessing operation for various vision tasks. However, despite advances in deep learning-based methods, RGB-D SOD is still challenging due to the large domain gap between an RGB image and the depth map and low-quality depth maps. To solve this problem, we propose a novel superpixel prototype sampling network (SPSN) architecture. The proposed model splits the input RGB image and depth map into component superpixels to generate component prototypes. We design a prototype sampling network so that the network only samples prototypes corresponding to salient objects. In addition, we propose a reliance selection module to recognize the quality of each RGB and depth feature map and adaptively weight them in proportion to their reliability. The proposed method makes the model robust to inconsistencies between RGB images and depth maps and eliminates the influence of non-salient objects. Our method is evaluated on five popular datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed method through comparative experiments.}
+}
+
+@inproceedings{park2022fastano,
+  selected={true},
+  abbr={WACV},
+  title={FastAno: Fast anomaly detection via spatio-temporal patch transformation},
+  author={Park, Chaewon and Cho, MyeongAh and Lee, Minhyeok and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={2249--2259},
+  year={2022},
+  arxiv={2106.08613},
+  abstract={Video anomaly detection has gained significant attention due to the increasing requirements of automatic monitoring for surveillance videos. Especially, the prediction based approach is one of the most studied methods to detect anomalies by predicting frames that include abnormal events in the test set after learning with the normal frames of the training set. However, a lot of prediction networks are computationally expensive owing to the use of pre-trained optical flow networks, or fail to detect abnormal situations because of their strong generative ability to predict even the anomalies. To address these shortcomings, we propose spatial rotation transformation (SRT) and temporal mixing transformation (TMT) to generate irregular patch cuboids within normal frame cuboids in order to enhance the learning of normal features. Additionally, the proposed patch transformation is used only during the training phase, allowing our model to detect abnormal frames at fast speed during inference. Our model is evaluated on three anomaly detection benchmarks, achieving competitive accuracy and surpassing all the previous works in terms of speed.}
+}
+
+@article{lee2022hierarchically,
+  abbr={arXiv},
+  title={Hierarchically Decomposed Graph Convolutional Networks for Skeleton-Based Action Recognition},
+  author={Lee, Jungho and Lee, Minhyeok and Lee, Dogyoon and Lee, Sangyoon},
+  journal={arXiv preprint arXiv:2208.10741},
+  year={2022},
+  arxiv={2208.10741},
+  code={https://github.com/Jho-Yonsei/HD-GCN},
+  abstract={Graph convolutional networks (GCNs) are the most commonly used methods for skeleton-based action recognition and have achieved remarkable performance. Generating adjacency matrices with semantically meaningful edges is particularly important for this task, but extracting such edges is challenging problem. To solve this, we propose a hierarchically decomposed graph convolutional network (HD-GCN) architecture with a novel hierarchically decomposed graph (HD-Graph). The proposed HD-GCN effectively decomposes every joint node into several sets to extract major structurally adjacent and distant edges, and uses them to construct an HD-Graph containing those edges in the same semantic spaces of a human skeleton. In addition, we introduce an attention-guided hierarchy aggregation (A-HA) module to highlight the dominant hierarchical edge sets of the HD-Graph. Furthermore, we apply a new six-way ensemble method, which uses only joint and bone stream without any motion stream. The proposed model is evaluated and achieves state-of-the-art performance on three large, popular datasets: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA. Finally, we demonstrate the effectiveness of our model with various comparative experiments.}
+}
+
+@inproceedings{lee2022edgeconv,
+  selected={true},
+  abbr={WACV},
+  title={Edgeconv with attention module for monocular depth estimation},
+  author={Lee, Minhyeok and Hwang, Sangwon and Park, Chaewon and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={2858--2867},
+  year={2022},
+  arxiv={2106.08615},
+  abstract={Monocular depth estimation is an especially important task in robotics and autonomous driving, where 3D structural information is essential. However, extreme lighting conditions and complex surface objects make it difficult to predict depth in a single image. Therefore, to generate accurate depth maps, it is important for the model to learn structural information about the scene. We propose a novel Patch-Wise EdgeConv Module (PEM) and EdgeConv Attention Module (EAM) to solve the difficulty of monocular depth estimation. The proposed modules extract structural information by learning the relationship between image patches close to each other in space using edge convolution. Our method is evaluated on two popular datasets, the NYU Depth V2 and the KITTI Eigen split, achieving state-of-the-art performance. We prove that the proposed model predicts depth robustly in challenging scenes through various comparative experiments.}
+}
+
+@inproceedings{cho2023treating,
+  selected={true},
+  abbr={WACV},
+  title={Treating motion as option to reduce motion dependency in unsupervised video object segmentation},
+  author={Cho, Suhwan and Lee, Minhyeok and Lee, Seunghoon and Park, Chaewon and Kim, Donghyeong and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={5140--5149},
+  year={2023},
+  arxiv={2209.03138},
+  code={https://github.com/suhwan-cho/tmo},
+  abstract={Unsupervised video object segmentation (VOS) aims to detect the most salient object in a video sequence at the pixel level. In unsupervised VOS, most state-of-the-art methods leverage motion cues obtained from optical flow maps in addition to appearance cues to exploit the property that salient objects usually have distinctive movements compared to the background. However, as they are overly dependent on motion cues, which may be unreliable in some cases, they cannot achieve stable prediction. To reduce this motion dependency of existing two-stream VOS methods, we propose a novel motion-as-option network that optionally utilizes motion cues. Additionally, to fully exploit the property of the proposed network that motion is not always required, we introduce a collaborative network learning strategy. On all the public benchmark datasets, our proposed network affords state-of-the-art performance with real-time inference speed.}
 }
 
 @article{lee2023tsanet,
