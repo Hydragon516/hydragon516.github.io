@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Hydragon516
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - Hydragon516/SPSN
+  - Hydragon516/ESA-official
+  - Hydragon516/PMN
+  - Hydragon516/Awesome-monocular-3d-object-detection
+  - Hydragon516/aliexpress-tracker
