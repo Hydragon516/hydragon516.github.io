@@ -289,6 +289,120 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge">WACV</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="lee2023unsupervised" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Unsupervised Video Object Segmentation via Prototype Memory Network</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, Suhwan Cho, Seunghoon Lee, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Chaewon Park, Sangyoun Lee' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</em>, 2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2209.03712" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/Hydragon516/PMN" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Unsupervised video object segmentation aims to segment a target object in the video without a ground truth mask in the initial frame. This challenging task requires extracting features for the most salient common objects within a video sequence. This difficulty can be solved by using motion information such as optical flow, but using only the information between adjacent frames results in poor connectivity between distant frames and poor performance. To solve this problem, we propose a novel prototype memory network architecture. The proposed model effectively extracts the RGB and motion information by extracting superpixel-based component prototypes from the input RGB images and optical flow maps. In addition, the model scores the usefulness of the component prototypes in each frame based on a self-learning algorithm and adaptively stores the most useful prototypes in memory and discards obsolete prototypes. We use the prototypes in the memory bank to predict the next query frames mask, which enhances the association between distant frames to help with accurate mask prediction. Our method is evaluated on three datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed model with various ablation studies.</p>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"><abbr class="badge">ECCV</abbr></div>
+
+        <!-- Entry bib key -->
+        <div id="cho2022tackling" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Tackling background distraction in video object segmentation</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Suhwan Cho, Heansung Lee, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, and
+          <span class="more-authors" title="click to view 4 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '4 more authors' ? 'Chaewon Park, Sungjun Jang, Minjung Kim, Sangyoun Lee' : '4 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">4 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXII</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2207.06953" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/suhwan-cho/TBD" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Semi-supervised video object segmentation (VOS) aims to densely track certain designated objects in videos. One of the main challenges in this task is the existence of background distractors that appear similar to the target objects. We propose three novel strategies to suppress such distractors: 1) a spatio-temporally diversified template construction scheme to obtain generalized properties of the target objects; 2) a learnable distance-scoring function to exclude spatially-distant distractors by exploiting the temporal consistency between two consecutive frames; 3) swap-and-attach augmentation to force each object to have unique features by providing training samples containing entangled objects. On all public benchmark datasets, our model achieves a comparable performance to contemporary state-of-the-art approaches, even with real-time performance. Qualitative results also demonstrate the superiority of our approach over existing methods. We believe our approach will be widely used for future VOS research.</p>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
         <div class="col-sm-2 abbr"><abbr class="badge">ECCV</abbr></div>
 
         <!-- Entry bib key -->
@@ -508,120 +622,6 @@
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
             <p>Unsupervised video object segmentation (VOS) aims to detect the most salient object in a video sequence at the pixel level. In unsupervised VOS, most state-of-the-art methods leverage motion cues obtained from optical flow maps in addition to appearance cues to exploit the property that salient objects usually have distinctive movements compared to the background. However, as they are overly dependent on motion cues, which may be unreliable in some cases, they cannot achieve stable prediction. To reduce this motion dependency of existing two-stream VOS methods, we propose a novel motion-as-option network that optionally utilizes motion cues. Additionally, to fully exploit the property of the proposed network that motion is not always required, we introduce a collaborative network learning strategy. On all the public benchmark datasets, our proposed network affords state-of-the-art performance with real-time inference speed.</p>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr"><abbr class="badge">WACV</abbr></div>
-
-        <!-- Entry bib key -->
-        <div id="lee2023unsupervised" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Unsupervised Video Object Segmentation via Prototype Memory Network</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, Suhwan Cho, Seunghoon Lee, and
-          <span class="more-authors" title="click to view 2 more authors" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '2 more authors' ? 'Chaewon Park, Sangyoun Lee' : '2 more authors';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">2 more authors</span>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</em>, 2023
-        </div>
-        <div class="periodical">
-          
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2209.03712" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-            <a href="https://github.com/Hydragon516/PMN" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
-          </div>
-          
-          <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Unsupervised video object segmentation aims to segment a target object in the video without a ground truth mask in the initial frame. This challenging task requires extracting features for the most salient common objects within a video sequence. This difficulty can be solved by using motion information such as optical flow, but using only the information between adjacent frames results in poor connectivity between distant frames and poor performance. To solve this problem, we propose a novel prototype memory network architecture. The proposed model effectively extracts the RGB and motion information by extracting superpixel-based component prototypes from the input RGB images and optical flow maps. In addition, the model scores the usefulness of the component prototypes in each frame based on a self-learning algorithm and adaptively stores the most useful prototypes in memory and discards obsolete prototypes. We use the prototypes in the memory bank to predict the next query frames mask, which enhances the association between distant frames to help with accurate mask prediction. Our method is evaluated on three datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed model with various ablation studies.</p>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr"><abbr class="badge">ECCV</abbr></div>
-
-        <!-- Entry bib key -->
-        <div id="cho2022tackling" class="col-sm-8">
-        <!-- Title -->
-        <div class="title">Tackling background distraction in video object segmentation</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Suhwan Cho, Heansung Lee, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, and
-          <span class="more-authors" title="click to view 4 more authors" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '4 more authors' ? 'Chaewon Park, Sungjun Jang, Minjung Kim, Sangyoun Lee' : '4 more authors';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">4 more authors</span>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>In Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXII</em>, 2022
-        </div>
-        <div class="periodical">
-          
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2207.06953" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-            <a href="https://github.com/suhwan-cho/TBD" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
-          </div>
-          
-          <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Semi-supervised video object segmentation (VOS) aims to densely track certain designated objects in videos. One of the main challenges in this task is the existence of background distractors that appear similar to the target objects. We propose three novel strategies to suppress such distractors: 1) a spatio-temporally diversified template construction scheme to obtain generalized properties of the target objects; 2) a learnable distance-scoring function to exclude spatially-distant distractors by exploiting the temporal consistency between two consecutive frames; 3) swap-and-attach augmentation to force each object to have unique features by providing training samples containing entangled objects. On all public benchmark datasets, our model achieves a comparable performance to contemporary state-of-the-art approaches, even with real-time performance. Qualitative results also demonstrate the superiority of our approach over existing methods. We believe our approach will be widely used for future VOS research.</p>
           </div>
         </div>
       </div>
