@@ -2,18 +2,18 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Minhyeok Lee
+    - name: E-mail
+      value: hydragon516@yonsei.ac.kr
     - name: Languages
-      value: English, German
+      value: Korean, English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S. in Electrical and Electronic Engineering
+      institution: Yonsei University, Seoul, Republic of Korea
+      year: 2017 ~ 2021
       description:
         - Description 1.
         - Description 2.
