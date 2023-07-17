@@ -85,7 +85,7 @@
 }
 
 @article{lee2023adaptive,
-  addr={arXiv},
+  addr={ICIP},
   title={Adaptive Graph Convolution Module for Salient Object Detection},
   author={Lee, Yongwoo and Lee, Minhyeok and Cho, Suhwan and Lee, Sangyoun},
   journal={arXiv preprint arXiv:2303.09801},
@@ -131,11 +131,11 @@
 }
 
 @article{lee2022hierarchically,
-  abbr={arXiv},
+  abbr={ICCV},
   title={Hierarchically Decomposed Graph Convolutional Networks for Skeleton-Based Action Recognition},
   author={Lee, Jungho and Lee, Minhyeok and Lee, Dogyoon and Lee, Sangyoon},
   journal={arXiv preprint arXiv:2208.10741},
-  year={2022},
+  year={2023},
   arxiv={2208.10741},
   code={https://github.com/Jho-Yonsei/HD-GCN},
   abstract={Graph convolutional networks (GCNs) are the most commonly used methods for skeleton-based action recognition and have achieved remarkable performance. Generating adjacency matrices with semantically meaningful edges is particularly important for this task, but extracting such edges is challenging problem. To solve this, we propose a hierarchically decomposed graph convolutional network (HD-GCN) architecture with a novel hierarchically decomposed graph (HD-Graph). The proposed HD-GCN effectively decomposes every joint node into several sets to extract major structurally adjacent and distant edges, and uses them to construct an HD-Graph containing those edges in the same semantic spaces of a human skeleton. In addition, we introduce an attention-guided hierarchy aggregation (A-HA) module to highlight the dominant hierarchical edge sets of the HD-Graph. Furthermore, we apply a new six-way ensemble method, which uses only joint and bone stream without any motion stream. The proposed model is evaluated and achieves state-of-the-art performance on three large, popular datasets: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA. Finally, we demonstrate the effectiveness of our model with various comparative experiments.}
@@ -167,7 +167,7 @@
 }
 
 @article{lee2023tsanet,
-  addr={arXiv},
+  addr={ICIP},
   title={TSANET: Temporal and Scale Alignment for Unsupervised Video Object Segmentation},
   author={Lee, Seunghoon and Cho, Suhwan and Lee, Dogyoon and Lee, Minhyeok and Lee, Sangyoun},
   journal={arXiv preprint arXiv:2303.04376},
@@ -187,22 +187,27 @@
 }
 
 @article{lee2022leveraging,
-  addr={arXiv},
+  selected={true},
+  addr={ICCV},
   title={Leveraging Spatio-Temporal Dependency for Skeleton-Based Action Recognition},
   author={Lee, Jungho and Lee, Minhyeok and Cho, Suhwan and Woo, Sungmin and Lee, Sangyoun},
   journal={arXiv preprint arXiv:2212.04761},
-  year={2022},
+  year={2023},
   arxiv={2212.04761},
   abstract={Skeleton-based action recognition has attracted considerable attention due to its compact skeletal structure of the human body. Many recent methods have achieved remarkable performance using graph convolutional networks (GCNs) and convolutional neural networks (CNNs), which extract spatial and temporal features, respectively. Although spatial and temporal dependencies in the human skeleton have been explored, spatio-temporal dependency is rarely considered. In this paper, we propose the Inter-Frame Curve Network (IFC-Net) to effectively leverage the spatio-temporal dependency of the human skeleton. Our proposed network consists of two novel elements: 1) The Inter-Frame Curve (IFC) module; and 2) Dilated Graph Convolution (D-GC). The IFC module increases the spatio-temporal receptive field by identifying meaningful node connections between every adjacent frame and generating spatio-temporal curves based on the identified node connections. The D-GC allows the network to have a large spatial receptive field, which specifically focuses on the spatial domain. The kernels of D-GC are computed from the given adjacency matrices of the graph and reflect large receptive field in a way similar to the dilated CNNs. Our IFC-Net combines these two modules and achieves state-of-the-art performance on three skeleton-based action recognition benchmarks: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA.}
 }
 
 @InProceedings{Lee_2023_CVPR,
-    author    = {Lee, Dogyoon and Lee, Minhyeok and Shin, Chajin and Lee, Sangyoun},
-    title     = {DP-NeRF: Deblurred Neural Radiance Field With Physical Scene Priors},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
-    pages     = {12386-12396}
+  selected={true},
+  addr={CVPR},
+  author={Lee, Dogyoon and Lee, Minhyeok and Shin, Chajin and Lee, Sangyoun},
+  title={DP-NeRF: Deblurred Neural Radiance Field With Physical Scene Priors},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month={June},
+  year={2023},
+  pages={12386-12396},
+  arxiv={2211.12046},
+  abstract={Neural Radiance Field (NeRF) has exhibited outstanding three-dimensional (3D) reconstruction quality via the novel view synthesis from multi-view images and paired calibrated camera parameters. However, previous NeRF-based systems have been demonstrated under strictly controlled settings, with little attention paid to less ideal scenarios, including with the presence of noise such as exposure, illumination changes, and blur. In particular, though blur frequently occurs in real situations, NeRF that can handle blurred images has received little attention. The few studies that have investigated NeRF for blurred images have not considered geometric and appearance consistency in 3D space, which is one of the most important factors in 3D reconstruction. This leads to inconsistency and the degradation of the perceptual quality of the constructed scene. Hence, this paper proposes a DP-NeRF, a novel clean NeRF framework for blurred images, which is constrained with two physical priors. These priors are derived from the actual blurring process during image acquisition by the camera. DP-NeRF proposes rigid blurring kernel to impose 3D consistency utilizing the physical priors and adaptive weight proposal to refine the color composition error in consideration of the relationship between depth and blur. We present extensive experimental results for synthetic and real scenes with two types of blur: camera motion blur and defocus blur. The results demonstrate that DP-NeRF successfully improves the perceptual quality of the constructed NeRF ensuring 3D geometric and appearance consistency. We further demonstrate the effectiveness of our model with comprehensive ablation analysis.}
 }
 
 @article{cho2022domain,
