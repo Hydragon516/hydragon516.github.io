@@ -1,3 +1,13 @@
+@article{lee2023guided,
+  title={Synchronizing Vision and Language: Bidirectional Token-Masking AutoEncoder for Referring Image Segmentation},
+  author={Lee, Minhyeok and Lee, Dogyoon and Lee, Jungho and Cho, Suhwan and Choi, Heeseung and Kim, Ig-Jae and Lee, Sangyoun},
+  journal={arXiv preprint arXiv:2311.17952},
+  year={2023},
+  arxiv={2311.17952},
+  abstract={Referring Image Segmentation (RIS) aims to segment target objects expressed in natural language within a scene at the pixel level. Various recent RIS models have achieved state-of-the-art performance by generating contextual tokens to model multimodal features from pretrained encoders and effectively fusing them using transformer-based cross-modal attention. While these methods match language features with image features to effectively identify likely target objects, they often struggle to correctly understand contextual information in complex and ambiguous sentences and scenes. To address this issue, we propose a novel bidirectional token-masking autoencoder (BTMAE) inspired by the masked autoencoder (MAE). The proposed model learns the context of image-to-language and language-to-image by reconstructing missing features in both image and language features at the token level. In other words, this approach involves mutually complementing across the features of images and language, with a focus on enabling the network to understand interconnected deep contextual information between the two modalities. This learning method enhances the robustness of RIS performance in complex sentences and scenes. Our BTMAE achieves state-of-the-art performance on three popular datasets, and we demonstrate the effectiveness of the proposed method through various ablation studies.},
+  preview={BTMAE.png}
+}
+
 @inproceedings{lee2021regularization,
   selected={true},
   title={[CVPR 2021] Regularization strategy for point cloud via rigidly mixed sample},
