@@ -105,10 +105,11 @@
 }
 
 @article{lee2023guided,
-  title={Guided Slot Attention for Unsupervised Video Object Segmentation},
+  selected={true},
+  title={[CVPR 2024] Guided Slot Attention for Unsupervised Video Object Segmentation},
   author={Lee, Minhyeok and Cho, Suhwan and Lee, Dogyoon and Park, Chaewon and Lee, Jungho and Lee, Sangyoun},
-  journal={arXiv preprint arXiv:2303.08314},
-  year={2023},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024},
   arxiv={2303.08314},
   abstract={Unsupervised video object segmentation aims to segment the most prominent object in a video sequence. However, the existence of complex backgrounds and multiple foreground objects make this task challenging. To address this issue, we propose a guided slot attention network to reinforce spatial structural information and obtain better foreground--background separation. The foreground and background slots, which are initialized with query guidance, are iteratively refined based on interactions with template information. Furthermore, to improve slot--template interaction and effectively fuse global and local features in the target and reference frames, K-nearest neighbors filtering and a feature aggregation transformer are introduced. The proposed model achieves state-of-the-art performance on two popular datasets. Additionally, we demonstrate the robustness of the proposed model in challenging scenes through various comparative experiments.},
   preview={GSA-Net.gif}
@@ -117,7 +118,7 @@
 @inproceedings{lee2022spsn,
   selected={true},
   title={[ECCV 2022] Spsn: Superpixel prototype sampling network for rgb-d salient object detection},
-  author={Lee, Minhyeok and Park, Chaewon and Cho, Suhwan and Lee, Sangyoun},
+  author={Lee, Minhyeok* and Park, Chaewon* and Cho, Suhwan and Lee, Sangyoun},
   booktitle={Computer Vision--ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23--27, 2022, Proceedings, Part XXIX},
   pages={630--647},
   year={2022},
@@ -224,10 +225,11 @@
 }
 
 @article{cho2022domain,
-  title={Dual Prototype Attention for Unsupervised Video Object Segmentation},
-  author={Cho, Suhwan and Lee, Minhyeok and Lee, Seunghoon and Lee, Sangyoun},
-  journal={arXiv preprint arXiv:2211.12036},
-  year={2022},
+  selected={true},
+  title={[CVPR 2024] Dual Prototype Attention for Unsupervised Video Object Segmentation},
+  author={Cho, Suhwan* and Lee, Minhyeok* and Lee, Seunghoon and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024},
   arxiv={2211.12036},
   code={https://github.com/Hydragon516/DPA},
   abstract={Unsupervised video object segmentation (VOS) aims to detect and segment the most salient object in videos. The primary techniques used in unsupervised VOS are 1) the collaboration of appearance and motion information and 2) temporal fusion between different frames. This paper proposes two novel prototype-based attention mechanisms, inter-modality attention (IMA) and inter-frame attention (IFA), to incorporate these techniques via dense propagation across different modalities and frames. IMA densely integrates context information from different modalities based on a mutual refinement. IFA injects global context of a video to the query frame, enabling a full utilization of useful properties from multiple frames. Experimental results on public benchmark datasets demonstrate that our proposed approach outperforms all existing methods by a substantial margin. The proposed two components are also thoroughly validated via ablative study.},
