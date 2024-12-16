@@ -272,6 +272,79 @@
 
   <picture>
     
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/SMURF-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/SMURF-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/SMURF-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/SMURF.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="SMURF.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="lee2024smurf" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Jungho Lee, Dogyoon Lee, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Donghyung Kim, Sangyoun Lee' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>arXiv preprint arXiv:2403.07547</em>, 2024
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2403.07547" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/Jho-Yonsei/SMURF" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Neural radiance fields (NeRF) has attracted considerable attention for their exceptional ability in synthesizing novel views with high fidelity. However, the presence of motion blur, resulting from slight camera movements during extended shutter exposures, poses a significant challenge, potentially compromising the quality of the reconstructed 3D scenes. While recent studies have addressed this issue, they do not consider the continuous dynamics of camera movements during image acquisition, leading to inaccurate scene reconstruction. Additionally, these methods are plagued by slow training and rendering speed. To effectively handle these issues, we propose sequential motion understanding radiance fields (SMURF), a novel approach that employs neural ordinary differential equation (Neural-ODE) to model continuous camera motion and leverages the explicit volumetric representation method for faster training and robustness to motion-blurred input images. The core idea of the SMURF is continuous motion blurring kernel (CMBK), a unique module designed to model a continuous camera movements for processing blurry inputs. Our model, rigorously evaluated against benchmark datasets, demonstrates state-of-the-art performance both quantitatively and qualitatively.</p>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-6 preview">
+<figure>
+
+  <picture>
+    
     <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/GSA-Net.gif-480.webp"></source>
     <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/GSA-Net.gif-800.webp"></source>
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/GSA-Net.gif-1400.webp"></source>
@@ -286,7 +359,7 @@
 </div>
 
         <!-- Entry bib key -->
-        <div id="lee2023guidee" class="col-sm-8">
+        <div id="lee2024guided" class="col-sm-8">
         <!-- Title -->
         <div class="title">[CVPR 2024] Guided Slot Attention for Unsupervised Video Object Segmentation</div>
         <!-- Author -->
@@ -312,7 +385,7 @@
         
         
         <div class="periodical">
-          <em></em> 2024
+          <em>In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 2024
         </div>
         <div class="periodical">
           
@@ -322,6 +395,7 @@
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="http://arxiv.org/abs/2303.08314" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/Hydragon516/GSANet" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
           </div>
           
           <div class="badges">
@@ -358,9 +432,9 @@
 </div>
 
         <!-- Entry bib key -->
-        <div id="cho2022domain" class="col-sm-8">
+        <div id="cho2024dual" class="col-sm-8">
         <!-- Title -->
-        <div class="title">[CVPR 2024] Dual Prototype Attention for Unsupervised Video Object Segmentation</div>
+        <div class="title">[CVPR 2024] Dual prototype attention for unsupervised video object segmentation</div>
         <!-- Author -->
         <div class="author">
         
@@ -384,7 +458,7 @@
         
         
         <div class="periodical">
-          <em></em> 2024
+          <em>In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 2024
         </div>
         <div class="periodical">
           
