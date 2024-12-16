@@ -20,6 +20,17 @@
   preview={CRiM-GS.png}
 }
 
+@article{lee2024smurf,
+  title={SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields},
+  author={Lee, Jungho and Lee, Dogyoon and Lee, Minhyeok and Kim, Donghyung and Lee, Sangyoun},
+  journal={arXiv preprint arXiv:2403.07547},
+  abstract={Neural radiance fields (NeRF) has attracted considerable attention for their exceptional ability in synthesizing novel views with high fidelity. However, the presence of motion blur, resulting from slight camera movements during extended shutter exposures, poses a significant challenge, potentially compromising the quality of the reconstructed 3D scenes. While recent studies have addressed this issue, they do not consider the continuous dynamics of camera movements during image acquisition, leading to inaccurate scene reconstruction. Additionally, these methods are plagued by slow training and rendering speed. To effectively handle these issues, we propose sequential motion understanding radiance fields (SMURF), a novel approach that employs neural ordinary differential equation (Neural-ODE) to model continuous camera motion and leverages the explicit volumetric representation method for faster training and robustness to motion-blurred input images. The core idea of the SMURF is continuous motion blurring kernel (CMBK), a unique module designed to model a continuous camera movements for processing blurry inputs. Our model, rigorously evaluated against benchmark datasets, demonstrates state-of-the-art performance both quantitatively and qualitatively.},
+  year={2024},
+  arxiv={2403.07547},
+  code={https://github.com/Jho-Yonsei/SMURF},
+  preview={SMURF.png}
+}
+
 @article{lee2023guided,
   title={Synchronizing Vision and Language: Bidirectional Token-Masking AutoEncoder for Referring Image Segmentation},
   author={Lee, Minhyeok and Lee, Dogyoon and Lee, Jungho and Cho, Suhwan and Choi, Heeseung and Kim, Ig-Jae and Lee, Sangyoun},
@@ -122,12 +133,15 @@
   preview={adagcn.png}
 }
 
-@article{lee2023guided,
+@inproceedings{lee2024guided,
   title={[CVPR 2024] Guided Slot Attention for Unsupervised Video Object Segmentation},
   author={Lee, Minhyeok and Cho, Suhwan and Lee, Dogyoon and Park, Chaewon and Lee, Jungho and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3807--3816},
   year={2024},
   arxiv={2303.08314},
   abstract={Unsupervised video object segmentation aims to segment the most prominent object in a video sequence. However, the existence of complex backgrounds and multiple foreground objects make this task challenging. To address this issue, we propose a guided slot attention network to reinforce spatial structural information and obtain better foreground--background separation. The foreground and background slots, which are initialized with query guidance, are iteratively refined based on interactions with template information. Furthermore, to improve slot--template interaction and effectively fuse global and local features in the target and reference frames, K-nearest neighbors filtering and a feature aggregation transformer are introduced. The proposed model achieves state-of-the-art performance on two popular datasets. Additionally, we demonstrate the robustness of the proposed model in challenging scenes through various comparative experiments.},
+  code={https://github.com/Hydragon516/GSANet},
   preview={GSA-Net.gif}
 }
 
@@ -233,9 +247,11 @@
   preview={DP-Nerf.gif}
 }
 
-@article{cho2022domain,
-  title={[CVPR 2024] Dual Prototype Attention for Unsupervised Video Object Segmentation},
+@inproceedings{cho2024dual,
+  title={[CVPR 2024] Dual prototype attention for unsupervised video object segmentation},
   author={Cho, Suhwan and Lee, Minhyeok and Lee, Seunghoon and Lee, Dogyoon and Choi, Heeseung and Kim, Ig-Jae and Lee, Sangyoun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={19238--19247},
   year={2024},
   arxiv={2211.12036},
   code={https://github.com/Hydragon516/DPA},
