@@ -3,7 +3,53 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
-        {%- if entry.preview -%}
+          {%- if entry.preview -%}
+          {%- comment -%}
+            preview_hover(호버용 이미지)도 함께 정의되어 있다면
+            onmouseover / onmouseout으로 이미지를 바꿔치기
+          {%- endcomment -%}
+          {%- if entry.preview_hover -%}
+            {%- assign preview_url = entry.preview %}
+            {%- assign preview_hover_url = entry.preview_hover %}
+        
+            {%- comment -%}
+              만약 preview가 외부 링크인지(local path가 아닌지) 체크
+            {%- endcomment -%}
+            {%- if entry.preview contains '://' %}
+              {%- assign preview_url = entry.preview %}
+            {%- else %}
+              {%- assign preview_url = '/assets/img/publication_preview/' | append: entry.preview %}
+            {%- endif %}
+        
+            {%- if entry.preview_hover contains '://' %}
+              {%- assign preview_hover_url = entry.preview_hover %}
+            {%- else %}
+              {%- assign preview_hover_url = '/assets/img/publication_preview/' | append: entry.preview_hover %}
+            {%- endif %}
+        
+            <img
+              class="preview z-depth-1 rounded"
+              src="{{ preview_url }}"
+              onmouseover="this.src='{{ preview_hover_url }}'"
+              onmouseout="this.src='{{ preview_url }}'"
+            >
+          {%- else -%}
+            {%- comment -%}
+              preview_hover 필드가 없는 경우 기존 로직대로 처리
+            {%- endcomment -%}
+            {% if entry.preview contains '://' -%}
+              <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+            {%- else -%}
+              {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+              {% include figure.html
+                 path=entry_path
+                 class="preview z-depth-1 rounded"
+                 alt=entry.preview
+              -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+        <!-- {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {%- else -%}
@@ -23,7 +69,7 @@
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
-        {%- endif -%}
+        {%- endif -%} -->
         </div>
 
         <!-- Entry bib key -->
