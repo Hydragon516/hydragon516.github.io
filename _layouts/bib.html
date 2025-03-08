@@ -3,27 +3,41 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
-        {%- if entry.preview -%}
-          {% if entry.preview contains '://' -%}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-          {%- else -%}
-            {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
-            {% include figure.html
-            path=entry_path
-            class="preview z-depth-1 rounded"
-            alt=entry.preview -%}
-          {%- endif -%}
-        {%- elsif entry.abbr -%}
-          {%- if site.data.venues[entry.abbr] -%}
-            {%- assign venue_style = nil -%}
-            {%- if site.data.venues[entry.abbr].color != blank -%}
-              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+          {%- if entry.preview -%}
+            {%- if entry.preview contains '://' -%}
+              <!-- 외부 링크인 경우 -->
+              <img 
+                class="preview z-depth-1 rounded"
+                src="{{ entry.preview }}"
+                onmouseover="this.src='{{ entry.preview_hover }}'"
+                onmouseout="this.src='{{ entry.preview }}'"
+                alt="{{ entry.preview }}"
+              >
+            {%- else -%}
+              <!-- 내부 경로인 경우 -->
+              {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+              {%- assign hover_path = entry.preview_hover | prepend: '/assets/img/publication_preview/' -%}
+              <img
+                class="preview z-depth-1 rounded"
+                src="{{ entry_path }}"
+                onmouseover="this.src='{{ hover_path }}'"
+                onmouseout="this.src='{{ entry_path }}'"
+                alt="{{ entry.preview }}"
+              >
             {%- endif -%}
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
-          {%- else -%}
-            <abbr class="badge">{{entry.abbr}}</abbr>
+          {%- elsif entry.abbr -%}
+            {%- if site.data.venues[entry.abbr] -%}
+              {%- assign venue_style = nil -%}
+              {%- if site.data.venues[entry.abbr].color != blank -%}
+                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+              {%- endif -%}
+              <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>
+                <a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
+              </abbr>
+            {%- else -%}
+              <abbr class="badge">{{entry.abbr}}</abbr>
+            {%- endif -%}
           {%- endif -%}
-        {%- endif -%}
         </div>
 
         <!-- Entry bib key -->
