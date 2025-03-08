@@ -5,7 +5,8 @@
         <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
           {%- if entry.preview -%}
             {%- assign is_video = false -%}
-            {%- if entry.preview endswith '.mp4' -%}
+            {%- assign ext = entry.preview | downcase | slice: -4, 4 -%} 
+            {%- if ext == '.mp4' -%}
               {%- assign is_video = true -%}
             {%- endif -%}
         
