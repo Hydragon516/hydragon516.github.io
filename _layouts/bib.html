@@ -4,26 +4,54 @@
       <div class="row">
         <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
           {%- if entry.preview -%}
-            {%- if entry.preview contains '://' -%}
-              <!-- 외부 링크인 경우 -->
-              <img 
+            {%- assign is_video = false -%}
+            {%- if entry.preview endswith '.mp4' -%}
+              {%- assign is_video = true -%}
+            {%- endif -%}
+        
+            {%- if is_video == true -%}
+              <!-- 동영상 Preview -->
+              <!-- 호버 시 다른 동영상으로 바뀌도록 설정 -->
+              {%- assign entry_path = entry.preview -%}
+              {%- assign hover_path = entry.preview_hover -%}
+        
+              <video
                 class="preview z-depth-1 rounded"
-                src="{{ entry.preview }}"
-                onmouseover="this.src='{{ entry.preview_hover }}'"
-                onmouseout="this.src='{{ entry.preview }}'"
-                alt="{{ entry.preview }}"
+                autoplay
+                loop
+                muted
+                playsinline
+                onmouseover="
+                  this.pause();
+                  this.querySelector('source').src='{{ hover_path }}';
+                  this.load();
+                  this.play();
+                "
+                onmouseout="
+                  this.pause();
+                  this.querySelector('source').src='{{ entry_path }}';
+                  this.load();
+                  this.play();
+                "
               >
+                <source src="{{ entry_path }}" type="video/mp4" />
+                <!-- 브라우저 미지원 시 안내 -->
+                해당 브라우저는 video 태그를 지원하지 않습니다.
+              </video>
+        
             {%- else -%}
-              <!-- 내부 경로인 경우 -->
+              <!-- 이미지 Preview -->
+              <!-- 호버 시 다른 이미지로 바뀌도록 설정 -->
               {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
-              {%- assign hover_path = entry.preview_hover | prepend: '/assets/img/publication_preview/' -%}
+              {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
+              
               <img
                 class="preview z-depth-1 rounded"
                 src="{{ entry_path }}"
                 onmouseover="this.src='{{ hover_path }}'"
                 onmouseout="this.src='{{ entry_path }}'"
                 alt="{{ entry.preview }}"
-              >
+              />
             {%- endif -%}
           {%- elsif entry.abbr -%}
             {%- if site.data.venues[entry.abbr] -%}
