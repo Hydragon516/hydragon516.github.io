@@ -3,148 +3,62 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}"
-     onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem && hovItem 
-           && defItem.tagName.toLowerCase() === 'video'
-           && hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     "
-     onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem && hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
+          style="position: relative;"
+          onmouseover="var h = document.getElementById('hover-{{ entry.title | slugify }}'); if(h) h.style.display='block';"
+          onmouseout="var h = document.getElementById('hover-{{ entry.title | slugify }}'); if(h) h.style.display='none';">
 
-          {%- if entry.preview -%}
-            {%- if entry.preview contains '://' -%}
-              {%- if entry.preview contains '.mp4' -%}
-                <!-- 외부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded"
-                      src="{{ entry.preview }}"
-                      loop autoplay muted playsinline>
+        {%- if entry.preview -%}
+          {% if entry.preview contains '://' %}
+            {% if entry.preview contains '.mp4' %}
+              <!-- mp4 동영상 반복재생 (loop), 소리끄기(muted), 자동재생(autoplay), iOS 등 대응(playsinline) -->
+              <video loop muted autoplay playsinline style="width: 100%; height: auto;">
+                <source src="{{ entry.preview }}" type="video/mp4">
+              </video>
+            {% else %}
+              <!-- 이미지 처리 -->
+              <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+            {% endif %}
+          {% else %}
+            {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+            {% if entry.preview contains '.mp4' %}
+              <video loop muted autoplay playsinline style="width: 100%; height: auto;">
+                <source src="{{ entry_path }}" type="video/mp4">
+              </video>
+            {% else %}
+              {% include figure.html
+                path=entry_path
+                class="preview z-depth-1 rounded"
+                alt=entry.preview %}
+            {% endif %}
+          {% endif %}
+
+          {% if entry.hover %}
+            <div id="hover-{{ entry.title | slugify }}"
+                style="display: none; position: absolute; top: 0; left: 0; width: 100%;">
+              {% if entry.hover contains '.mp4' %}
+                <video loop muted autoplay playsinline style="width: 100%; height: auto;">
+                  <source src="{{ entry.hover }}" type="video/mp4">
                 </video>
+              {% else %}
+                <img style="width: 100%;" src="{{ entry.hover }}">
+              {% endif %}
+            </div>
+          {% endif %}
 
-                {% if entry.hover_preview %}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 외부 동영상 (마우스 오버 시 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ entry.hover_preview }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 외부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ entry.hover_preview }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- else -%}
-                <!-- 외부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="{{ entry.preview }}">
-
-                {% if entry.hover_preview %}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 외부 동영상 (호버) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ entry.hover_preview }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 외부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ entry.hover_preview }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- endif -%}
-
-            {%- else -%}
-              {% comment %}
-                내부 경로로 가정하여 /assets/img/publication_preview/를 prepend
-              {% endcomment %}
-              {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
-
-              {%- if entry.preview contains '.mp4' -%}
-                <!-- 내부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded"
-                      src="{{ entry_path }}"
-                      loop autoplay muted playsinline>
-                </video>
-
-                {% if entry.hover_preview %}
-                  {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 내부 동영상 (호버 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ hover_path }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ hover_path }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- else -%}
-                <!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="{{ entry_path }}">
-
-                {% if entry.hover_preview %}
-                  {%- assign hover_img_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 내부 동영상 (호버) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ hover_img_path }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ hover_img_path }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- endif -%}
+        {%- elsif entry.abbr -%}
+          {%- if site.data.venues[entry.abbr] -%}
+            {%- assign venue_style = nil -%}
+            {%- if site.data.venues[entry.abbr].color != blank -%}
+              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
             {%- endif -%}
-
-          {%- elsif entry.abbr -%}
-            {%- if site.data.venues[entry.abbr] -%}
-              {%- assign venue_style = nil -%}
-              {%- if site.data.venues[entry.abbr].color != blank -%}
-                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
-              {%- endif -%}
-              <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>
-                <a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
-              </abbr>
-            {%- else -%}
-              <abbr class="badge">{{entry.abbr}}</abbr>
-            {%- endif -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>
+              <a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
+            </abbr>
+          {%- else -%}
+            <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
-        </div>
+        {%- endif -%}
+      </div>
 
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
