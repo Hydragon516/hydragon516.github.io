@@ -2,72 +2,120 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
-          {%- if entry.preview -%}
-            {%- assign is_video = false -%}
-            {%- assign ext = entry.preview | downcase | slice: -4, 4 -%} 
-            {%- if ext == '.mp4' -%}
-              {%- assign is_video = true -%}
-            {%- endif -%}
-        
-            {%- if is_video == true -%}
-              <!-- 동영상 Preview -->
-              <!-- 호버 시 다른 동영상으로 바뀌도록 설정 -->
-              {%- assign entry_path = entry.preview -%}
-              {%- assign hover_path = entry.preview_hover -%}
-        
-              <video
-                class="preview z-depth-1 rounded"
-                autoplay
-                loop
-                muted
-                playsinline
-                onmouseover="
-                  this.pause();
-                  this.querySelector('source').src='{{ hover_path }}';
-                  this.load();
-                  this.play();
-                "
-                onmouseout="
-                  this.pause();
-                  this.querySelector('source').src='{{ entry_path }}';
-                  this.load();
-                  this.play();
-                "
-              >
-                <source src="{{ entry_path }}" type="video/mp4" />
-                <!-- 브라우저 미지원 시 안내 -->
-                해당 브라우저는 video 태그를 지원하지 않습니다.
-              </video>
-        
+        <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}"
+     onmouseover="
+       this.querySelector('.hover-item').style.display='block';
+       this.querySelector('.default-item').style.display='none';"
+     onmouseout="
+       this.querySelector('.hover-item').style.display='none';
+       this.querySelector('.default-item').style.display='block';">
+
+        {%- if entry.preview -%}
+          {%- if entry.preview contains '://' -%}
+            {%- if entry.preview contains '.mp4' -%}
+              <!-- 동영상 (외부 경로) -->
+              <video class="default-item preview z-depth-1 rounded"
+                    src="{{ entry.preview }}"
+                    loop autoplay muted playsinline></video>
+
+              {% if entry.hover_preview %}
+                {% if entry.hover_preview contains '.mp4' %}
+                  <!-- hover 시 대체될 동영상 (외부 경로) -->
+                  <video class="hover-item preview z-depth-1 rounded"
+                        src="{{ entry.hover_preview }}"
+                        loop autoplay muted playsinline
+                        style="display:none;"></video>
+                {% else %}
+                  <!-- hover 시 대체될 이미지 (외부 경로) -->
+                  <img class="hover-item preview z-depth-1 rounded"
+                      src="{{ entry.hover_preview }}"
+                      style="display:none;" />
+                {% endif %}
+              {% endif %}
             {%- else -%}
-              <!-- 이미지 Preview -->
-              <!-- 호버 시 다른 이미지로 바뀌도록 설정 -->
-              {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
-              {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
-              
-              <img
-                class="preview z-depth-1 rounded"
-                src="{{ entry_path }}"
-                onmouseover="this.src='{{ hover_path }}'"
-                onmouseout="this.src='{{ entry_path }}'"
-                alt="{{ entry.preview }}"
-              />
+              <!-- 이미지 (외부 경로) -->
+              <img class="default-item preview z-depth-1 rounded" src="{{ entry.preview }}">
+
+              {% if entry.hover_preview %}
+                {% if entry.hover_preview contains '.mp4' %}
+                  <!-- hover 시 대체될 동영상 (외부 경로) -->
+                  <video class="hover-item preview z-depth-1 rounded"
+                        src="{{ entry.hover_preview }}"
+                        loop autoplay muted playsinline
+                        style="display:none;"></video>
+                {% else %}
+                  <!-- hover 시 대체될 이미지 (외부 경로) -->
+                  <img class="hover-item preview z-depth-1 rounded"
+                      src="{{ entry.hover_preview }}"
+                      style="display:none;" />
+                {% endif %}
+              {% endif %}
             {%- endif -%}
-          {%- elsif entry.abbr -%}
-            {%- if site.data.venues[entry.abbr] -%}
-              {%- assign venue_style = nil -%}
-              {%- if site.data.venues[entry.abbr].color != blank -%}
-                {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
-              {%- endif -%}
-              <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>
-                <a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
-              </abbr>
+
+          {%- else -%}
+            {% comment %}
+              내부 경로라 가정하면 /assets/img/publication_preview/를 prepend
+            {% endcomment %}
+            {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+
+            {%- if entry.preview contains '.mp4' -%}
+              <!-- 동영상 (내부 경로) -->
+              <video class="default-item preview z-depth-1 rounded"
+                    src="{{ entry_path }}"
+                    loop autoplay muted playsinline></video>
+
+              {% if entry.hover_preview %}
+                {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
+                {% if entry.hover_preview contains '.mp4' %}
+                  <!-- hover 시 대체될 동영상 (내부 경로) -->
+                  <video class="hover-item preview z-depth-1 rounded"
+                        src="{{ hover_path }}"
+                        loop autoplay muted playsinline
+                        style="display:none;"></video>
+                {% else %}
+                  <!-- hover 시 대체될 이미지 (내부 경로) -->
+                  <img class="hover-item preview z-depth-1 rounded"
+                      src="{{ hover_path }}"
+                      style="display:none;" />
+                {% endif %}
+              {% endif %}
             {%- else -%}
-              <abbr class="badge">{{entry.abbr}}</abbr>
+              <!-- 이미지 (내부 경로) -->
+              {%- assign entry_img_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+              <img class="default-item preview z-depth-1 rounded" src="{{ entry_img_path }}">
+
+              {% if entry.hover_preview %}
+                {%- assign hover_img_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
+                {% if entry.hover_preview contains '.mp4' %}
+                  <!-- hover 시 대체될 동영상 (내부 경로) -->
+                  <video class="hover-item preview z-depth-1 rounded"
+                        src="{{ hover_img_path }}"
+                        loop autoplay muted playsinline
+                        style="display:none;"></video>
+                {% else %}
+                  <!-- hover 시 대체될 이미지 (내부 경로) -->
+                  <img class="hover-item preview z-depth-1 rounded"
+                      src="{{ hover_img_path }}"
+                      style="display:none;" />
+                {% endif %}
+              {% endif %}
             {%- endif -%}
           {%- endif -%}
-        </div>
+
+        {%- elsif entry.abbr -%}
+          {%- if site.data.venues[entry.abbr] -%}
+            {%- assign venue_style = nil -%}
+            {%- if site.data.venues[entry.abbr].color != blank -%}
+              {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+            {%- endif -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>
+              <a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
+            </abbr>
+          {%- else -%}
+            <abbr class="badge">{{entry.abbr}}</abbr>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
 
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
