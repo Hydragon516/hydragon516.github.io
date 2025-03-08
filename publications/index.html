@@ -119,43 +119,33 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/ESC-Net1.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2025-effective-sam-combination-for-open-vocabulary-semantic-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2025-effective-sam-combination-for-open-vocabulary-semantic-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/ESC-Net2.png" style="display:none;">
-                  
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/ESC-Net1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/ESC-Net1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/ESC-Net1-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/ESC-Net1.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="ESC-Net1.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          
+            <div id="hover-cvpr-2025-effective-sam-combination-for-open-vocabulary-semantic-segmentation" style="display: none; position: absolute; top: 0; left: 0; width: 100%;">
+              
+                <img style="width: 100%;" src="ESC-Net2.png">
+              
+            </div>
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2025effective" class="col-sm-8">
@@ -211,45 +201,22 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/coco1.mp4" loop="" autoplay="" muted="" playsinline="">
-                </video>
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2025-cocogaussian-leveraging-circle-of-confusion-for-gaussian-splatting-from-defocused-images'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2025-cocogaussian-leveraging-circle-of-confusion-for-gaussian-splatting-from-defocused-images'); if(h) h.style.display='none';">
+              <video loop="" muted="" autoplay="" playsinline="" style="width: 100%; height: auto;">
+                <source src="/assets/img/publication_preview/coco1.mp4" type="video/mp4"></source>
+              </video>
+            
+          
 
-                
-                    <!-- 내부 동영상 (호버 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/coco2.mp4" loop="" muted="" playsinline="" style="display:none;">
-                    </video>
-                  
-                </div>
+          
+            <div id="hover-cvpr-2025-cocogaussian-leveraging-circle-of-confusion-for-gaussian-splatting-from-defocused-images" style="display: none; position: absolute; top: 0; left: 0; width: 100%;">
+              
+                <video loop="" muted="" autoplay="" playsinline="" style="width: 100%; height: auto;">
+                  <source src="coco2.mp4" type="video/mp4"></source>
+                </video>
+              
+            </div>
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2025cocoGaussian" class="col-sm-8">
@@ -306,45 +273,22 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/FFF_VDI1.mp4" loop="" autoplay="" muted="" playsinline="">
-                </video>
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-aaai-2025-video-diffusion-models-are-strong-video-inpainter'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-aaai-2025-video-diffusion-models-are-strong-video-inpainter'); if(h) h.style.display='none';">
+              <video loop="" muted="" autoplay="" playsinline="" style="width: 100%; height: auto;">
+                <source src="/assets/img/publication_preview/FFF_VDI1.mp4" type="video/mp4"></source>
+              </video>
+            
+          
 
-                
-                    <!-- 내부 동영상 (호버 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/FFF_VDI2.mp4" loop="" muted="" playsinline="" style="display:none;">
-                    </video>
-                  
-                </div>
+          
+            <div id="hover-aaai-2025-video-diffusion-models-are-strong-video-inpainter" style="display: none; position: absolute; top: 0; left: 0; width: 100%;">
+              
+                <video loop="" muted="" autoplay="" playsinline="" style="width: 100%; height: auto;">
+                  <source src="FFF_VDI2.mp4" type="video/mp4"></source>
+                </video>
+              
+            </div>
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2024video" class="col-sm-8">
@@ -405,39 +349,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/CRiM-GS.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-crim-gs-continuous-rigid-motion-aware-gaussian-splatting-from-motion-blurred-images'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-crim-gs-continuous-rigid-motion-aware-gaussian-splatting-from-motion-blurred-images'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/CRiM-GS-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/CRiM-GS-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/CRiM-GS-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/CRiM-GS.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="CRiM-GS.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2024crim" class="col-sm-8">
@@ -494,39 +426,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SMURF.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-smurf-continuous-dynamics-for-motion-deblurring-radiance-fields'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-smurf-continuous-dynamics-for-motion-deblurring-radiance-fields'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/SMURF-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/SMURF-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/SMURF-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/SMURF.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="SMURF.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2024smurf" class="col-sm-8">
@@ -583,39 +503,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/GSA-Net.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2024-guided-slot-attention-for-unsupervised-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2024-guided-slot-attention-for-unsupervised-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/GSA-Net.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/GSA-Net.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/GSA-Net.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/GSA-Net.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="GSA-Net.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2024guided" class="col-sm-8">
@@ -672,39 +580,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/DPA.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2024-dual-prototype-attention-for-unsupervised-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2024-dual-prototype-attention-for-unsupervised-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/DPA-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/DPA-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/DPA-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/DPA.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="DPA.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="cho2024dual" class="col-sm-8">
@@ -765,39 +661,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/BTMAE.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-synchronizing-vision-and-language-bidirectional-token-masking-autoencoder-for-referring-image-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-synchronizing-vision-and-language-bidirectional-token-masking-autoencoder-for-referring-image-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/BTMAE-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/BTMAE-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/BTMAE-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/BTMAE.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="BTMAE.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023guided" class="col-sm-8">
@@ -853,39 +737,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/PMN.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-wacv-2023-unsupervised-video-object-segmentation-via-prototype-memory-network'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-wacv-2023-unsupervised-video-object-segmentation-via-prototype-memory-network'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/PMN-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/PMN-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/PMN-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/PMN.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="PMN.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023unsupervised" class="col-sm-8">
@@ -942,39 +814,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/adagcn.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-icip-2023-adaptive-graph-convolution-module-for-salient-object-detection'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-icip-2023-adaptive-graph-convolution-module-for-salient-object-detection'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/adagcn-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/adagcn-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/adagcn-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/adagcn.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="adagcn.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023adaptive" class="col-sm-8">
@@ -1030,39 +890,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/HD-GCN.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-iccv-2023-hierarchically-decomposed-graph-convolutional-networks-for-skeleton-based-action-recognition'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-iccv-2023-hierarchically-decomposed-graph-convolutional-networks-for-skeleton-based-action-recognition'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/HD-GCN.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/HD-GCN.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/HD-GCN.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/HD-GCN.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="HD-GCN.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023hierarchically" class="col-sm-8">
@@ -1119,39 +967,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TMO.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-wacv-2023-treating-motion-as-option-to-reduce-motion-dependency-in-unsupervised-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-wacv-2023-treating-motion-as-option-to-reduce-motion-dependency-in-unsupervised-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/TMO-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/TMO-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/TMO-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/TMO.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="TMO.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="cho2023treating" class="col-sm-8">
@@ -1208,39 +1044,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TSANET.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-icip-2023-tsanet-temporal-and-scale-alignment-for-unsupervised-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-icip-2023-tsanet-temporal-and-scale-alignment-for-unsupervised-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/TSANET-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/TSANET-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/TSANET-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/TSANET.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="TSANET.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023tsanet" class="col-sm-8">
@@ -1296,39 +1120,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TSDN.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-icassp-2023-two-stream-decoder-feature-normality-estimating-network-for-industrial-anomaly-detection'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-icassp-2023-two-stream-decoder-feature-normality-estimating-network-for-industrial-anomaly-detection'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/TSDN-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/TSDN-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/TSDN-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/TSDN.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="TSDN.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="park2023two" class="col-sm-8">
@@ -1384,39 +1196,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/STCNet.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-iccv-2023-leveraging-spatio-temporal-dependency-for-skeleton-based-action-recognition'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-iccv-2023-leveraging-spatio-temporal-dependency-for-skeleton-based-action-recognition'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/STCNet.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/STCNet.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/STCNet.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/STCNet.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="STCNet.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2023leveraging" class="col-sm-8">
@@ -1472,39 +1272,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/DP-Nerf.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2023-dp-nerf-deblurred-neural-radiance-field-with-physical-scene-priors'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2023-dp-nerf-deblurred-neural-radiance-field-with-physical-scene-priors'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/DP-Nerf.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/DP-Nerf.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/DP-Nerf.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/DP-Nerf.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="DP-Nerf.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="Lee_2023_CVPR" class="col-sm-8">
@@ -1565,39 +1353,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/ESA.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-wacv-2022-robust-lane-detection-via-expanded-self-attention'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-wacv-2022-robust-lane-detection-via-expanded-self-attention'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/ESA.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/ESA.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/ESA.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/ESA.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="ESA.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2022robust" class="col-sm-8">
@@ -1654,39 +1430,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TBD.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-eccv-2022-tackling-background-distraction-in-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-eccv-2022-tackling-background-distraction-in-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/TBD-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/TBD-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/TBD-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/TBD.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="TBD.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="cho2022tackling" class="col-sm-8">
@@ -1743,39 +1507,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/CFDN.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-icip-2022-saliency-detection-via-global-context-enhanced-feature-fusion-and-edge-weighted-loss'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-icip-2022-saliency-detection-via-global-context-enhanced-feature-fusion-and-edge-weighted-loss'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/CFDN-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/CFDN-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/CFDN-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/CFDN.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="CFDN.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="park2022saliency" class="col-sm-8">
@@ -1831,39 +1583,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SGCN.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-icip-2022-superpixel-group-correlation-network-for-co-saliency-detection'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-icip-2022-superpixel-group-correlation-network-for-co-saliency-detection'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/SGCN-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/SGCN-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/SGCN-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/SGCN.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="SGCN.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2022superpixel" class="col-sm-8">
@@ -1918,39 +1658,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/RandomSEMO.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-randomsemo-normality-learning-of-moving-objects-for-video-anomaly-detection'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-randomsemo-normality-learning-of-moving-objects-for-video-anomaly-detection'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/RandomSEMO-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/RandomSEMO-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/RandomSEMO-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/RandomSEMO.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="RandomSEMO.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="park2022randomsemo" class="col-sm-8">
@@ -2006,39 +1734,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SPSN.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-eccv-2022-spsn-superpixel-prototype-sampling-network-for-rgb-d-salient-object-detection'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-eccv-2022-spsn-superpixel-prototype-sampling-network-for-rgb-d-salient-object-detection'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/SPSN-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/SPSN-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/SPSN-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/SPSN.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="SPSN.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2022spsn" class="col-sm-8">
@@ -2095,39 +1811,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/FastAno.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-wacv-2022-fastano-fast-anomaly-detection-via-spatio-temporal-patch-transformation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-wacv-2022-fastano-fast-anomaly-detection-via-spatio-temporal-patch-transformation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/FastAno-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/FastAno-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/FastAno-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/FastAno.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="FastAno.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="park2022fastano" class="col-sm-8">
@@ -2183,39 +1887,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/Edgeconv.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-wacv-2022-edgeconv-with-attention-module-for-monocular-depth-estimation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-wacv-2022-edgeconv-with-attention-module-for-monocular-depth-estimation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/Edgeconv-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/Edgeconv-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/Edgeconv-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/Edgeconv.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="Edgeconv.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2022edgeconv" class="col-sm-8">
@@ -2271,39 +1963,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/DPS-Net.gif">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-boundary-aware-camouflaged-object-detection-via-deformable-point-sampling'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-boundary-aware-camouflaged-object-detection-via-deformable-point-sampling'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/DPS-Net.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/DPS-Net.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/DPS-Net.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/DPS-Net.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="DPS-Net.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2022global" class="col-sm-8">
@@ -2359,39 +2039,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/EMVOS.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-pixel-level-equalized-matching-for-video-object-segmentation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-pixel-level-equalized-matching-for-video-object-segmentation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/EMVOS-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/EMVOS-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/EMVOS-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/EMVOS.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="EMVOS.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="cho2022pixel" class="col-sm-8">
@@ -2451,39 +2119,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/rsmix.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-cvpr-2021-regularization-strategy-for-point-cloud-via-rigidly-mixed-sample'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-cvpr-2021-regularization-strategy-for-point-cloud-via-rigidly-mixed-sample'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/rsmix-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/rsmix-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/rsmix-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/rsmix.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="rsmix.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2021regularization" class="col-sm-8">
@@ -2540,39 +2196,27 @@
 <li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/MFMA.png">
+        <div class="col-sm-6 preview" style="position: relative;" onmouseover="var h = document.getElementById('hover-multi-level-feature-maps-attention-for-monocular-depth-estimation'); if(h) h.style.display='block';" onmouseout="var h = document.getElementById('hover-multi-level-feature-maps-attention-for-monocular-depth-estimation'); if(h) h.style.display='none';">
+              <figure>
 
-                </div>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/MFMA-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/MFMA-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/MFMA-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/MFMA.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="MFMA.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            
+          
+
+          </div>
 
         <!-- Entry bib key -->
         <div id="lee2021multi" class="col-sm-8">
