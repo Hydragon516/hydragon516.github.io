@@ -2,134 +2,147 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}"
-     onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem && hovItem 
-           && defItem.tagName.toLowerCase() === 'video'
-           && hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     "
-     onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem && hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
+        <div class="col-sm-6 {% if entry.preview %}preview{% else %}abbr{% endif %}">
           {%- if entry.preview -%}
-            {%- if entry.preview contains '://' -%}
+            {% comment %}
+              - entry.preview(기본 프리뷰)와 entry.hover_preview(호버 시 나타날 영상/이미지)
+              - 외부 경로인 경우 '://' 포함 여부로 판단
+              - mp4 확장자 여부로 동영상/이미지 구분
+            {% endcomment %}
+        
+            {% if entry.preview contains '://' %}
+              {%- assign is_video = false -%}
               {%- if entry.preview contains '.mp4' -%}
-                <!-- 외부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded"
-                      src="{{ entry.preview }}"
-                      loop autoplay muted playsinline>
-                </video>
-
-                {% if entry.hover_preview %}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 외부 동영상 (마우스 오버 시 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ entry.hover_preview }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 외부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ entry.hover_preview }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- else -%}
-                <!-- 외부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="{{ entry.preview }}">
-
-                {% if entry.hover_preview %}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 외부 동영상 (호버) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ entry.hover_preview }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 외부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ entry.hover_preview }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
+                {%- assign is_video = true -%}
               {%- endif -%}
-
-            {%- else -%}
-              {% comment %}
-                내부 경로로 가정하여 /assets/img/publication_preview/를 prepend
-              {% endcomment %}
+        
+              <!-- 동영상 + 호버 영상 둘 다 mp4인 경우 -->
+              {% if is_video and entry.hover_preview and entry.hover_preview contains '.mp4' %}
+                <div class="video-container">
+                  <!-- 기본 프리뷰(동영상) -->
+                  <video class="default-item preview z-depth-1 rounded"
+                         src="{{ entry.preview }}"
+                         loop autoplay muted playsinline>
+                  </video>
+                  <!-- 호버 프리뷰(동영상) -->
+                  <video class="hover-item preview z-depth-1 rounded"
+                         src="{{ entry.hover_preview }}"
+                         loop autoplay muted playsinline>
+                  </video>
+                </div>
+        
+              <!-- 동영상 + 호버 이미지인 경우 -->
+              {% elsif is_video and entry.hover_preview %}
+                <div class="video-container">
+                  <!-- 기본 프리뷰(동영상) -->
+                  <video class="default-item preview z-depth-1 rounded"
+                         src="{{ entry.preview }}"
+                         loop autoplay muted playsinline>
+                  </video>
+                  <!-- 호버 프리뷰(이미지) -->
+                  <img class="hover-item preview z-depth-1 rounded"
+                       src="{{ entry.hover_preview }}" />
+                </div>
+        
+              <!-- 기본 프리뷰 자체가 동영상만 있을 때(호버X) -->
+              {% elsif is_video and not entry.hover_preview %}
+                <div class="video-container">
+                  <video class="default-item preview z-depth-1 rounded"
+                         src="{{ entry.preview }}"
+                         loop autoplay muted playsinline>
+                  </video>
+                </div>
+        
+              <!-- 기본 프리뷰가 이미지(+ 호버가 동영상 or 이미지)인 경우 -->
+              {% else %}
+                {%- comment -%}
+                  기본 프리뷰는 이미지
+                  호버 프리뷰가 동영상일 수도, 이미지일 수도 있음
+                {%- endcomment -%}
+                {% if entry.hover_preview %}
+                  <!-- 이미지/호버영상 or 이미지/호버이미지 -->
+                  <div class="video-container">
+                    <img class="default-item preview z-depth-1 rounded"
+                         src="{{ entry.preview }}" />
+                    {% if entry.hover_preview contains '.mp4' %}
+                      <video class="hover-item preview z-depth-1 rounded"
+                             src="{{ entry.hover_preview }}"
+                             loop autoplay muted playsinline>
+                      </video>
+                    {% else %}
+                      <img class="hover-item preview z-depth-1 rounded"
+                           src="{{ entry.hover_preview }}" />
+                    {% endif %}
+                  </div>
+                {% else %}
+                  <!-- 호버 프리뷰 없이, 그냥 이미지만 -->
+                  <img class="preview z-depth-1 rounded"
+                       src="{{ entry.preview }}" />
+                {% endif %}
+              {% endif %}
+        
+            {# ---------- 내부 경로인 경우 ---------- #}
+            {% else %}
               {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
-
+              {%- assign is_video = false -%}
               {%- if entry.preview contains '.mp4' -%}
-                <!-- 내부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded"
-                      src="{{ entry_path }}"
-                      loop autoplay muted playsinline>
-                </video>
-
-                {% if entry.hover_preview %}
-                  {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 내부 동영상 (호버 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ hover_path }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ hover_path }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
-              {%- else -%}
-                <!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="{{ entry_path }}">
-
-                {% if entry.hover_preview %}
-                  {%- assign hover_img_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
-                  {% if entry.hover_preview contains '.mp4' %}
-                    <!-- 내부 동영상 (호버) -->
-                    <video class="hover-item preview z-depth-1 rounded"
-                          src="{{ hover_img_path }}"
-                          loop muted playsinline
-                          style="display:none;">
-                    </video>
-                  {% else %}
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded"
-                        src="{{ hover_img_path }}"
-                        style="display:none;" />
-                  {% endif %}
-                {% endif %}
+                {%- assign is_video = true -%}
               {%- endif -%}
-            {%- endif -%}
-
+        
+              {% if is_video and entry.hover_preview %}
+                <!-- preview도 mp4, hover도 있을 때 -->
+                {%- assign hover_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
+                <div class="video-container">
+                  <video class="default-item preview z-depth-1 rounded"
+                         src="{{ entry_path }}"
+                         loop autoplay muted playsinline>
+                  </video>
+        
+                  {% if entry.hover_preview contains '.mp4' %}
+                    <video class="hover-item preview z-depth-1 rounded"
+                           src="{{ hover_path }}"
+                           loop autoplay muted playsinline>
+                    </video>
+                  {% else %}
+                    <img class="hover-item preview z-depth-1 rounded"
+                         src="{{ hover_path }}" />
+                  {% endif %}
+                </div>
+        
+              {% elsif is_video and not entry.hover_preview %}
+                <!-- preview만 mp4인 경우 -->
+                <div class="video-container">
+                  <video class="default-item preview z-depth-1 rounded"
+                         src="{{ entry_path }}"
+                         loop autoplay muted playsinline>
+                  </video>
+                </div>
+        
+              {% else %}
+                <!-- preview가 이미지인 경우 -->
+                {%- assign entry_img_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+                {% if entry.hover_preview %}
+                  <div class="video-container">
+                    <img class="default-item preview z-depth-1 rounded"
+                         src="{{ entry_img_path }}" />
+                    {%- assign hover_img_path = entry.hover_preview | prepend: '/assets/img/publication_preview/' -%}
+                    {% if entry.hover_preview contains '.mp4' %}
+                      <video class="hover-item preview z-depth-1 rounded"
+                             src="{{ hover_img_path }}"
+                             loop autoplay muted playsinline>
+                      </video>
+                    {% else %}
+                      <img class="hover-item preview z-depth-1 rounded"
+                           src="{{ hover_img_path }}" />
+                    {% endif %}
+                  </div>
+                {% else %}
+                  <img class="preview z-depth-1 rounded"
+                       src="{{ entry_img_path }}" />
+                {% endif %}
+              {% endif %}
+            {% endif %}
+        
           {%- elsif entry.abbr -%}
             {%- if site.data.venues[entry.abbr] -%}
               {%- assign venue_style = nil -%}
