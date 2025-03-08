@@ -1,3 +1,14 @@
+@inproceedings{cho2025find,
+  title={Find First, Track Next: Decoupling Identification and Propagation in Referring Video Object Segmentation},
+  author={Cho*, Suhwan and Lee*, Seunghoon and Lee, Minhyeok and Lee, Jungho and Lee, Sangyoun},
+  year={2025},
+  arxiv={2503.03492},
+  code={https://github.com/suhwan-cho/FindTrack},
+  abstract={Open-vocabulary semantic segmentation aims to assign pixel-level labels to images across an unlimited range of classes. Traditional methods address this by sequentially connecting a powerful mask proposal generator, such as the Segment Anything Model (SAM), with a pre-trained vision-language model like CLIP. But these two-stage approaches often suffer from high computational costs, memory inefficiencies. In this paper, we propose ESC-Net, a novel one-stage open-vocabulary segmentation model that leverages the SAM decoder blocks for class-agnostic segmentation within an efficient inference framework. By embedding pseudo prompts generated from image-text correlations into SAM's promptable segmentation framework, ESC-Net achieves refined spatial aggregation for accurate mask predictions. ESC-Net achieves superior performance on standard benchmarks, including ADE20K, PASCAL-VOC, and PASCAL-Context, outperforming prior methods in both efficiency and accuracy. Comprehensive ablation studies further demonstrate its robustness across challenging conditions.},
+  preview={FindTrack.mp4},
+  hover_preview={FindTrack.mp4}
+}
+
 @inproceedings{lee2025effective,
   title={[CVPR 2025] Effective SAM Combination for Open-Vocabulary Semantic Segmentation},
   author={Lee, Minhyeok and Cho, Suhwan and Lee, Jungho and Yang, Sunghun and Choi, Heeseung and Kim, Ig-Jae and Lee, Sangyoun},
@@ -6,7 +17,7 @@
   arxiv={2411.14723},
   abstract={Open-vocabulary semantic segmentation aims to assign pixel-level labels to images across an unlimited range of classes. Traditional methods address this by sequentially connecting a powerful mask proposal generator, such as the Segment Anything Model (SAM), with a pre-trained vision-language model like CLIP. But these two-stage approaches often suffer from high computational costs, memory inefficiencies. In this paper, we propose ESC-Net, a novel one-stage open-vocabulary segmentation model that leverages the SAM decoder blocks for class-agnostic segmentation within an efficient inference framework. By embedding pseudo prompts generated from image-text correlations into SAM's promptable segmentation framework, ESC-Net achieves refined spatial aggregation for accurate mask predictions. ESC-Net achieves superior performance on standard benchmarks, including ADE20K, PASCAL-VOC, and PASCAL-Context, outperforming prior methods in both efficiency and accuracy. Comprehensive ablation studies further demonstrate its robustness across challenging conditions.},
   preview={ESC-Net1.png},
-  hover={ESC-Net2.png}
+  hover_preview={ESC-Net2.png}
 }
 
 @inproceedings{lee2025cocoGaussian,
@@ -18,7 +29,7 @@
   code={https://github.com/Jho-Yonsei/CoCoGaussian},
   abstract={3D Gaussian Splatting (3DGS) has attracted significant attention for its high-quality novel view rendering, inspiring research to address real-world challenges. While conventional methods depend on sharp images for accurate scene reconstruction, real-world scenarios are often affected by defocus blur due to finite depth of field, making it essential to account for realistic 3D scene representation. In this study, we propose CoCoGaussian, a Circle of Confusion-aware Gaussian Splatting that enables precise 3D scene representation using only defocused images. CoCoGaussian addresses the challenge of defocus blur by modeling the Circle of Confusion (CoC) through a physically grounded approach based on the principles of photographic defocus. Exploiting 3D Gaussians, we compute the CoC diameter from depth and learnable aperture information, generating multiple Gaussians to precisely capture the CoC shape. Furthermore, we introduce a learnable scaling factor to enhance robustness and provide more flexibility in handling unreliable depth in scenes with reflective or refractive surfaces. Experiments on both synthetic and real-world datasets demonstrate that CoCoGaussian achieves state-of-the-art performance across multiple benchmarks.},
   preview={coco1.mp4},
-  hover={coco2.mp4}
+  hover_preview={coco2.mp4}
 }
 
 @article{lee2024video,
@@ -30,7 +41,7 @@
   code={https://github.com/Hydragon516/FFF-VDI},
   abstract={Propagation-based video inpainting using optical flow at the pixel or feature level has recently garnered significant attention. However, it has limitations such as the inaccuracy of optical flow prediction and the propagation of noise over time. These issues result in non-uniform noise and time consistency problems throughout the video, which are particularly pronounced when the removed area is large and involves substantial movement. To address these issues, we propose a novel First Frame Filling Video Diffusion Inpainting model (FFF-VDI). We design FFF-VDI inspired by the capabilities of pre-trained image-to-video diffusion models that can transform the first frame image into a highly natural video. To apply this to the video inpainting task, we propagate the noise latent information of future frames to fill the masked areas of the first frame's noise latent code. Next, we fine-tune the pre-trained image-to-video diffusion model to generate the inpainted video. The proposed model addresses the limitations of existing methods that rely on optical flow quality, producing much more natural and temporally consistent videos. This proposed approach is the first to effectively integrate image-to-video diffusion models into video inpainting tasks. Through various comparative experiments, we demonstrate that the proposed model can robustly handle diverse inpainting types with high quality.},
   preview={FFF_VDI1.mp4},
-  hover={FFF_VDI2.mp4}
+  hover_preview={FFF_VDI2.mp4}
 }
 
 @article{lee2024crim,
@@ -41,7 +52,8 @@
   arxiv={2407.03923},
   code={https://github.com/Jho-Yonsei/CRiM-GS},
   abstract={Neural radiance fields (NeRFs) have received significant attention due to their high-quality novel view rendering ability, prompting research to address various real-world cases. One critical challenge is the camera motion blur caused by camera movement during exposure time, which prevents accurate 3D scene reconstruction. In this study, we propose continuous rigid motion-aware gaussian splatting (CRiM-GS) to reconstruct accurate 3D scene from blurry images with real-time rendering speed. Considering the actual camera motion blurring process, which consists of complex motion patterns, we predict the continuous movement of the camera based on neural ordinary differential equations (ODEs). Specifically, we leverage rigid body transformations to model the camera motion with proper regularization, preserving the shape and size of the object. Furthermore, we introduce a continuous deformable 3D transformation in the \textit{SE(3)} field to adapt the rigid body transformation to real-world problems by ensuring a higher degree of freedom. By revisiting fundamental camera theory and employing advanced neural network training techniques, we achieve accurate modeling of continuous camera trajectories. We conduct extensive experiments, demonstrating state-of-the-art performance both quantitatively and qualitatively on benchmark datasets.},
-  preview={CRiM-GS.png}
+  preview={CRiM-GS.png},
+  hover_preview={CRiM-GS.mp4}
 }
 
 @article{lee2024smurf,
@@ -52,7 +64,8 @@
   year={2024},
   arxiv={2403.07547},
   code={https://github.com/Jho-Yonsei/SMURF},
-  preview={SMURF.png}
+  preview={SMURF.png},
+  hover_preview={SMURF.png}
 }
 
 @article{lee2023guided,
@@ -62,7 +75,8 @@
   year={2023},
   arxiv={2311.17952},
   abstract={Referring Image Segmentation (RIS) aims to segment target objects expressed in natural language within a scene at the pixel level. Various recent RIS models have achieved state-of-the-art performance by generating contextual tokens to model multimodal features from pretrained encoders and effectively fusing them using transformer-based cross-modal attention. While these methods match language features with image features to effectively identify likely target objects, they often struggle to correctly understand contextual information in complex and ambiguous sentences and scenes. To address this issue, we propose a novel bidirectional token-masking autoencoder (BTMAE) inspired by the masked autoencoder (MAE). The proposed model learns the context of image-to-language and language-to-image by reconstructing missing features in both image and language features at the token level. In other words, this approach involves mutually complementing across the features of images and language, with a focus on enabling the network to understand interconnected deep contextual information between the two modalities. This learning method enhances the robustness of RIS performance in complex sentences and scenes. Our BTMAE achieves state-of-the-art performance on three popular datasets, and we demonstrate the effectiveness of the proposed method through various ablation studies.},
-  preview={BTMAE.png}
+  preview={BTMAE.png},
+  hover_preview={BTMAE.png}
 }
 
 @inproceedings{lee2021regularization,
@@ -74,7 +88,8 @@
   arxiv={2102.01929},
   code={https://github.com/dogyoonlee/RSMix},
   abstract={Data augmentation is an effective regularization strategy to alleviate the overfitting, which is an inherent drawback of the deep neural networks. However, data augmentation is rarely considered for point cloud processing despite many studies proposing various augmentation methods for image data. Actually, regularization is essential for point clouds since lack of generality is more likely to occur in point cloud due to small datasets. This paper proposes a Rigid Subset Mix (RSMix), a novel data augmentation method for point clouds that generates a virtual mixed sample by replacing part of the sample with shape-preserved subsets from another sample. RSMix preserves structural information of the point cloud sample by extracting subsets from each sample without deformation using a neighboring function. The neighboring function was carefully designed considering unique properties of point cloud, unordered structure and non-grid. Experiments verified that RSMix successfully regularized the deep neural networks with remarkable improvement for shape classification. We also analyzed various combinations of data augmentations including RSMix with single and multi-view evaluations, based on abundant ablation studies.},
-  preview={rsmix.png}
+  preview={rsmix.png},
+  hover_preview={rsmix.png}
 }
 
 @inproceedings{lee2022robust,
@@ -86,7 +101,8 @@
   arxiv={2102.07037},
   code={https://github.com/Hydragon516/ESA-official},
   abstract={The image-based lane detection algorithm is one of the key technologies in autonomous vehicles. Modern deep learning methods achieve high performance in lane detection, but it is still difficult to accurately detect lanes in challenging situations such as congested roads and extreme lighting conditions. To be robust on these challenging situations, it is important to extract global contextual information even from limited visual cues. In this paper, we propose a simple but powerful self-attention mechanism optimized for lane detection called the Expanded Self Attention (ESA) module. Inspired by the simple geometric structure of lanes, the proposed method predicts the confidence of a lane along the vertical and horizontal directions in an image. The prediction of the confidence enables estimating occluded locations by extracting global contextual information. ESA module can be easily implemented and applied to any encoder-decoder-based model without increasing the inference time. The performance of our method is evaluated on three popular lane detection benchmarks (TuSimple, CULane and BDD100K). We achieve state-of-the-art performance in CULane and BDD100K and distinct improvement on TuSimple dataset. The experimental results show that our approach is robust to occlusion and extreme lighting conditions.},
-  preview={ESA.gif}
+  preview={ESA.gif},
+  hover_preview={ESA.png}
 }
 
 @inproceedings{lee2023unsupervised,
@@ -98,7 +114,8 @@
   arxiv={2209.03712},
   code={https://github.com/Hydragon516/PMN},
   abstract={Unsupervised video object segmentation aims to segment a target object in the video without a ground truth mask in the initial frame. This challenging task requires extracting features for the most salient common objects within a video sequence. This difficulty can be solved by using motion information such as optical flow, but using only the information between adjacent frames results in poor connectivity between distant frames and poor performance. To solve this problem, we propose a novel prototype memory network architecture. The proposed model effectively extracts the RGB and motion information by extracting superpixel-based component prototypes from the input RGB images and optical flow maps. In addition, the model scores the usefulness of the component prototypes in each frame based on a self-learning algorithm and adaptively stores the most useful prototypes in memory and discards obsolete prototypes. We use the prototypes in the memory bank to predict the next query frames mask, which enhances the association between distant frames to help with accurate mask prediction. Our method is evaluated on three datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed model with various ablation studies.},
-  preview={PMN.png}
+  preview={PMN.png},
+  hover_preview={PMN.png}
 }
 
 @inproceedings{cho2022tackling,
@@ -111,7 +128,8 @@
   arxiv={2207.06953},
   code={https://github.com/suhwan-cho/TBD},
   abstract={Semi-supervised video object segmentation (VOS) aims to densely track certain designated objects in videos. One of the main challenges in this task is the existence of background distractors that appear similar to the target objects. We propose three novel strategies to suppress such distractors: 1) a spatio-temporally diversified template construction scheme to obtain generalized properties of the target objects; 2) a learnable distance-scoring function to exclude spatially-distant distractors by exploiting the temporal consistency between two consecutive frames; 3) swap-and-attach augmentation to force each object to have unique features by providing training samples containing entangled objects. On all public benchmark datasets, our model achieves a comparable performance to contemporary state-of-the-art approaches, even with real-time performance. Qualitative results also demonstrate the superiority of our approach over existing methods. We believe our approach will be widely used for future VOS research.},
-  preview={TBD.png}
+  preview={TBD.png},
+  hover_preview={TBD.png}
 }
 
 @inproceedings{park2022saliency,
@@ -123,7 +141,8 @@
   organization={IEEE},
   arxiv={2110.06550},
   abstract={UNet-based methods have shown outstanding performance in salient object detection (SOD), but are problematic in two aspects. 1) Indiscriminately integrating the encoder feature, which contains spatial information for multiple objects, and the decoder feature, which contains global information of the salient object, is likely to convey unnecessary details of non-salient objects to the decoder, hindering saliency detection. 2) To deal with ambiguous object boundaries and generate accurate saliency maps, the model needs additional branches, such as edge reconstructions, which leads to increasing computational cost. To address the problems, we propose a context fusion decoder network (CFDN) and near edge weighted loss (NEWLoss) function. The CFDN creates an accurate saliency map by integrating global context information and thus suppressing the influence of the unnecessary spatial information. NEWLoss accelerates learning of obscure boundaries without additional modules by generating weight maps on object boundaries. Our method is evaluated on four benchmarks and achieves state-of-the-art performance. We prove the effectiveness of the proposed method through comparative experiments.},
-  preview={CFDN.png}
+  preview={CFDN.png},
+  hover_preview={CFDN.png}
 }
 
 @inproceedings{lee2022superpixel,
@@ -134,7 +153,8 @@
   year={2022},
   organization={IEEE},
   abstract={Co-saliency detection is a task to segment the occurring salient objects in a group of images. The biggest challenges are distracting objects in the background and ambiguity between the foreground and background. To handle these issues, we propose a novel superpixel group-correlation network (SGCN) architecture that uses a superpixel algorithm to obtain various component features from a group of images and creates a group-correlation matrix to detect the common components of those images. In this way, non-common objects can be effectively excluded from consideration, enabling a clear distinction between foreground and background. Our method outperforms current state-of-the-art methods on three popular benchmark datasets for co-saliency detection, and our extensive experiments thoroughly validate our claimed contributions.},
-  preview={SGCN.png}
+  preview={SGCN.png},
+  hover_preview={SGCN.png}
 }
 
 @article{park2022randomsemo,
@@ -144,7 +164,8 @@
   year={2022},
   arxiv={2202.06256},
   abstract={Recent anomaly detection algorithms have shown powerful performance by adopting frame predicting autoencoders. However, these methods face two challenging circumstances. First, they are likely to be trained to be excessively powerful, generating even abnormal frames well, which leads to failure in detecting anomalies. Second, they are distracted by the large number of objects captured in both foreground and background. To solve these problems, we propose a novel superpixel-based video data transformation technique named Random Superpixel Erasing on Moving Objects (RandomSEMO) and Moving Object Loss (MOLoss), built on top of a simple lightweight autoencoder. RandomSEMO is applied to the moving object regions by randomly erasing their superpixels. It enforces the network to pay attention to the foreground objects and learn the normal features more effectively, rather than simply predicting the future frame. Moreover, MOLoss urges the model to focus on learning normal objects captured within RandomSEMO by amplifying the loss on the pixels near the moving objects. The experimental results show that our model outperforms state-of-the-arts on three benchmarks.},
-  preview={RandomSEMO.png}
+  preview={RandomSEMO.png},
+  hover_preview={RandomSEMO.png}
 }
 
 @article{lee2023adaptive,
@@ -154,7 +175,8 @@
   year={2023},
   arxiv={2303.09801},
   abstract={Salient object detection (SOD) is a task that involves identifying and segmenting the most visually prominent object in an image. Existing solutions can accomplish this use a multi-scale feature fusion mechanism to detect the global context of an image. However, as there is no consideration of the structures in the image nor the relations between distant pixels, conventional methods cannot deal with complex scenes effectively. In this paper, we propose an adaptive graph convolution module (AGCM) to overcome these limitations. Prototype features are initially extracted from the input image using a learnable region generation layer that spatially groups features in the image. The prototype features are then refined by propagating information between them based on a graph architecture, where each feature is regarded as a node. Experimental results show that the proposed AGCM dramatically improves the SOD performance both quantitatively and quantitatively.},
-  preview={adagcn.png}
+  preview={adagcn.png},
+  hover_preview={adagcn.png}
 }
 
 @inproceedings{lee2024guided,
@@ -166,7 +188,8 @@
   arxiv={2303.08314},
   abstract={Unsupervised video object segmentation aims to segment the most prominent object in a video sequence. However, the existence of complex backgrounds and multiple foreground objects make this task challenging. To address this issue, we propose a guided slot attention network to reinforce spatial structural information and obtain better foreground--background separation. The foreground and background slots, which are initialized with query guidance, are iteratively refined based on interactions with template information. Furthermore, to improve slot--template interaction and effectively fuse global and local features in the target and reference frames, K-nearest neighbors filtering and a feature aggregation transformer are introduced. The proposed model achieves state-of-the-art performance on two popular datasets. Additionally, we demonstrate the robustness of the proposed model in challenging scenes through various comparative experiments.},
   code={https://github.com/Hydragon516/GSANet},
-  preview={GSA-Net.gif}
+  preview={GSA-Net.gif},
+  hover_preview={GSA-Net.png}
 }
 
 @inproceedings{lee2022spsn,
@@ -179,7 +202,8 @@
   arxiv={2207.07898},
   code={https://github.com/Hydragon516/SPSN},
   abstract={RGB-D salient object detection (SOD) has been in the spotlight recently because it is an important preprocessing operation for various vision tasks. However, despite advances in deep learning-based methods, RGB-D SOD is still challenging due to the large domain gap between an RGB image and the depth map and low-quality depth maps. To solve this problem, we propose a novel superpixel prototype sampling network (SPSN) architecture. The proposed model splits the input RGB image and depth map into component superpixels to generate component prototypes. We design a prototype sampling network so that the network only samples prototypes corresponding to salient objects. In addition, we propose a reliance selection module to recognize the quality of each RGB and depth feature map and adaptively weight them in proportion to their reliability. The proposed method makes the model robust to inconsistencies between RGB images and depth maps and eliminates the influence of non-salient objects. Our method is evaluated on five popular datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed method through comparative experiments.},
-  preview={SPSN.png}
+  preview={SPSN.png},
+  hover_preview={SPSN.png}
 }
 
 @inproceedings{park2022fastano,
@@ -190,7 +214,8 @@
   year={2022},
   arxiv={2106.08613},
   abstract={Video anomaly detection has gained significant attention due to the increasing requirements of automatic monitoring for surveillance videos. Especially, the prediction based approach is one of the most studied methods to detect anomalies by predicting frames that include abnormal events in the test set after learning with the normal frames of the training set. However, a lot of prediction networks are computationally expensive owing to the use of pre-trained optical flow networks, or fail to detect abnormal situations because of their strong generative ability to predict even the anomalies. To address these shortcomings, we propose spatial rotation transformation (SRT) and temporal mixing transformation (TMT) to generate irregular patch cuboids within normal frame cuboids in order to enhance the learning of normal features. Additionally, the proposed patch transformation is used only during the training phase, allowing our model to detect abnormal frames at fast speed during inference. Our model is evaluated on three anomaly detection benchmarks, achieving competitive accuracy and surpassing all the previous works in terms of speed.},
-  preview={FastAno.png}
+  preview={FastAno.png},
+  hover_preview={FastAno.png}
 }
 
 @inproceedings{lee2023hierarchically,
@@ -202,7 +227,8 @@
   arxiv={2208.10741},
   code={https://github.com/Jho-Yonsei/HD-GCN},
   abstract={Graph convolutional networks (GCNs) are the most commonly used methods for skeleton-based action recognition and have achieved remarkable performance. Generating adjacency matrices with semantically meaningful edges is particularly important for this task, but extracting such edges is challenging problem. To solve this, we propose a hierarchically decomposed graph convolutional network (HD-GCN) architecture with a novel hierarchically decomposed graph (HD-Graph). The proposed HD-GCN effectively decomposes every joint node into several sets to extract major structurally adjacent and distant edges, and uses them to construct an HD-Graph containing those edges in the same semantic spaces of a human skeleton. In addition, we introduce an attention-guided hierarchy aggregation (A-HA) module to highlight the dominant hierarchical edge sets of the HD-Graph. Furthermore, we apply a new six-way ensemble method, which uses only joint and bone stream without any motion stream. The proposed model is evaluated and achieves state-of-the-art performance on three large, popular datasets: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA. Finally, we demonstrate the effectiveness of our model with various comparative experiments.},
-  preview={HD-GCN.gif}
+  preview={HD-GCN.gif},
+  hover_preview={HD-GCN.gif}
 }
 
 @inproceedings{lee2022edgeconv,
@@ -213,7 +239,8 @@
   year={2022},
   arxiv={2106.08615},
   abstract={Monocular depth estimation is an especially important task in robotics and autonomous driving, where 3D structural information is essential. However, extreme lighting conditions and complex surface objects make it difficult to predict depth in a single image. Therefore, to generate accurate depth maps, it is important for the model to learn structural information about the scene. We propose a novel Patch-Wise EdgeConv Module (PEM) and EdgeConv Attention Module (EAM) to solve the difficulty of monocular depth estimation. The proposed modules extract structural information by learning the relationship between image patches close to each other in space using edge convolution. Our method is evaluated on two popular datasets, the NYU Depth V2 and the KITTI Eigen split, achieving state-of-the-art performance. We prove that the proposed model predicts depth robustly in challenging scenes through various comparative experiments.},
-  preview={Edgeconv.png}
+  preview={Edgeconv.png},
+  hover_preview={Edgeconv.png}
 }
 
 @inproceedings{cho2023treating,
@@ -225,7 +252,8 @@
   arxiv={2209.03138},
   code={https://github.com/suhwan-cho/tmo},
   abstract={Unsupervised video object segmentation (VOS) aims to detect the most salient object in a video sequence at the pixel level. In unsupervised VOS, most state-of-the-art methods leverage motion cues obtained from optical flow maps in addition to appearance cues to exploit the property that salient objects usually have distinctive movements compared to the background. However, as they are overly dependent on motion cues, which may be unreliable in some cases, they cannot achieve stable prediction. To reduce this motion dependency of existing two-stream VOS methods, we propose a novel motion-as-option network that optionally utilizes motion cues. Additionally, to fully exploit the property of the proposed network that motion is not always required, we introduce a collaborative network learning strategy. On all the public benchmark datasets, our proposed network affords state-of-the-art performance with real-time inference speed.},
-  preview={TMO.png}
+  preview={TMO.png},
+  hover_preview={TMO.png}
 }
 
 @article{lee2023tsanet,
@@ -235,7 +263,8 @@
   year={2023},
   arxiv={2303.04376},
   abstract={Unsupervised Video Object Segmentation (UVOS) refers to the challenging task of segmenting the prominent object in videos without manual guidance. In other words, the network detects the accurate region of the target object in a sequence of RGB frames without prior knowledge. In recent works, two approaches for UVOS have been discussed that can be divided into: appearance and appearance-motion based methods. Appearance based methods utilize the correlation information of inter-frames to capture target object that commonly appears in a sequence. However, these methods does not consider the motion of target object due to exploit the correlation information between randomly paired frames. Appearance-motion based methods, on the other hand, fuse the appearance features from RGB frames with the motion features from optical flow. Motion cue provides useful information since salient objects typically show distinctive motion in a sequence. However, these approaches have the limitation that the dependency on optical flow is dominant. In this paper, we propose a novel framework for UVOS that can address aforementioned limitations of two approaches in terms of both time and scale. Temporal Alignment Fusion aligns the saliency information of adjacent frames with the target frame to leverage the information of adjacent frames. Scale Alignment Decoder predicts the target object mask precisely by aggregating differently scaled feature maps via continuous mapping with implicit neural representation. We present experimental results on public benchmark datasets, DAVIS 2016 and FBMS, which demonstrate the effectiveness of our method. Furthermore, we outperform the state-of-the-art methods on DAVIS 2016.},
-  preview={TSANET.png}  
+  preview={TSANET.png},
+  hover_preview={TSANET.png}
 }
 
 @article{park2023two,
@@ -245,7 +274,8 @@
   year={2023},
   arxiv={2302.09794},
   abstract={Image reconstruction-based anomaly detection has recently been in the spotlight because of the difficulty of constructing anomaly datasets. These approaches work by learning to model normal features without seeing abnormal samples during training and then discriminating anomalies at test time based on the reconstructive errors. However, these models have limitations in reconstructing the abnormal samples due to their indiscriminate conveyance of features. Moreover, these approaches are not explicitly optimized for distinguishable anomalies. To address these problems, we propose a two-stream decoder network (TSDN), designed to learn both normal and abnormal features. Additionally, we propose a feature normality estimator (FNE) to eliminate abnormal features and prevent high-quality reconstruction of abnormal regions. Evaluation on a standard benchmark demonstrated performance better than state-of-the-art models.},
-  preview={TSDN.png}
+  preview={TSDN.png},
+  hover_preview={TSDN.png}
 }
 
 @inproceedings{lee2023leveraging,
@@ -256,7 +286,8 @@
   year={2023},
   arxiv={2212.04761},
   abstract={Skeleton-based action recognition has attracted considerable attention due to its compact skeletal structure of the human body. Many recent methods have achieved remarkable performance using graph convolutional networks (GCNs) and convolutional neural networks (CNNs), which extract spatial and temporal features, respectively. Although spatial and temporal dependencies in the human skeleton have been explored, spatio-temporal dependency is rarely considered. In this paper, we propose the Inter-Frame Curve Network (IFC-Net) to effectively leverage the spatio-temporal dependency of the human skeleton. Our proposed network consists of two novel elements: 1) The Inter-Frame Curve (IFC) module; and 2) Dilated Graph Convolution (D-GC). The IFC module increases the spatio-temporal receptive field by identifying meaningful node connections between every adjacent frame and generating spatio-temporal curves based on the identified node connections. The D-GC allows the network to have a large spatial receptive field, which specifically focuses on the spatial domain. The kernels of D-GC are computed from the given adjacency matrices of the graph and reflect large receptive field in a way similar to the dilated CNNs. Our IFC-Net combines these two modules and achieves state-of-the-art performance on three skeleton-based action recognition benchmarks: NTU-RGB+D 60, NTU-RGB+D 120, and Northwestern-UCLA.},
-  preview={STCNet.gif}
+  preview={STCNet.gif},
+  hover_preview={STCNet.gif}
 }
 
 @inproceedings{Lee_2023_CVPR,
@@ -268,7 +299,8 @@
   arxiv={2211.12046},
   code={https://github.com/dogyoonlee/DP-NeRF},
   abstract={Neural Radiance Field (NeRF) has exhibited outstanding three-dimensional (3D) reconstruction quality via the novel view synthesis from multi-view images and paired calibrated camera parameters. However, previous NeRF-based systems have been demonstrated under strictly controlled settings, with little attention paid to less ideal scenarios, including with the presence of noise such as exposure, illumination changes, and blur. In particular, though blur frequently occurs in real situations, NeRF that can handle blurred images has received little attention. The few studies that have investigated NeRF for blurred images have not considered geometric and appearance consistency in 3D space, which is one of the most important factors in 3D reconstruction. This leads to inconsistency and the degradation of the perceptual quality of the constructed scene. Hence, this paper proposes a DP-NeRF, a novel clean NeRF framework for blurred images, which is constrained with two physical priors. These priors are derived from the actual blurring process during image acquisition by the camera. DP-NeRF proposes rigid blurring kernel to impose 3D consistency utilizing the physical priors and adaptive weight proposal to refine the color composition error in consideration of the relationship between depth and blur. We present extensive experimental results for synthetic and real scenes with two types of blur: camera motion blur and defocus blur. The results demonstrate that DP-NeRF successfully improves the perceptual quality of the constructed NeRF ensuring 3D geometric and appearance consistency. We further demonstrate the effectiveness of our model with comprehensive ablation analysis.},
-  preview={DP-Nerf.gif}
+  preview={DP-Nerf.gif},
+  hover_preview={DP-Nerf.gif}
 }
 
 @inproceedings{cho2024dual,
@@ -280,7 +312,8 @@
   arxiv={2211.12036},
   code={https://github.com/Hydragon516/DPA},
   abstract={Unsupervised video object segmentation (VOS) aims to detect and segment the most salient object in videos. The primary techniques used in unsupervised VOS are 1) the collaboration of appearance and motion information and 2) temporal fusion between different frames. This paper proposes two novel prototype-based attention mechanisms, inter-modality attention (IMA) and inter-frame attention (IFA), to incorporate these techniques via dense propagation across different modalities and frames. IMA densely integrates context information from different modalities based on a mutual refinement. IFA injects global context of a video to the query frame, enabling a full utilization of useful properties from multiple frames. Experimental results on public benchmark datasets demonstrate that our proposed approach outperforms all existing methods by a substantial margin. The proposed two components are also thoroughly validated via ablative study.},
-  preview={DPA.png}
+  preview={DPA.png},
+  hover_preview={DPA.png}
 }
 
 @article{lee2022global,
@@ -290,7 +323,8 @@
   year={2022},
   arxiv={2211.12048},
   abstract={The camouflaged object detection (COD) task aims to identify and segment objects that blend into the background due to their similar color or texture. Despite the inherent difficulties of the task, COD has gained considerable attention in several fields, such as medicine, life-saving, and anti-military fields. In this paper, we propose a novel solution called the Deformable Point Sampling network (DPS-Net) to address the challenges associated with COD. The proposed DPS-Net utilizes a Deformable Point Sampling transformer (DPS transformer) that can effectively capture sparse local boundary information of significant object boundaries in COD using a deformable point sampling method. Moreover, the DPS transformer demonstrates robust COD performance by extracting contextual features for target object localization through integrating rough global positional information of objects with boundary local information. We evaluate our method on three prominent datasets and achieve state-of-the-art performance. Our results demonstrate the effectiveness of the proposed method through comparative experiments.},
-  preview={DPS-Net.gif}
+  preview={DPS-Net.gif},
+  hover_preview={DPS-Net.gif}
 }
 
 @article{cho2022pixel,
@@ -300,7 +334,8 @@
   year={2022},
   arxiv={2209.03139},
   abstract={Feature similarity matching, which transfers the information of the reference frame to the query frame, is a key component in semi-supervised video object segmentation. If surjective matching is adopted, background distractors can easily occur and degrade the performance. Bijective matching mechanisms try to prevent this by restricting the amount of information being transferred to the query frame, but have two limitations: 1) surjective matching cannot be fully leveraged as it is transformed to bijective matching at test time; and 2) test-time manual tuning is required for searching the optimal hyper-parameters. To overcome these limitations while ensuring reliable information transfer, we introduce an equalized matching mechanism. To prevent the reference frame information from being overly referenced, the potential contribution to the query frame is equalized by simply applying a softmax operation along with the query. On public benchmark datasets, our proposed approach achieves a comparable performance to state-of-the-art methods.},
-  preview={EMVOS.png}
+  preview={EMVOS.png},
+  hover_preview={EMVOS.png}
 }
 
 @inproceedings{lee2021multi,
@@ -311,5 +346,6 @@
   year={2021},
   organization={IEEE},
   abstract={[ICCE-Asia 2021] Monocular depth estimation is a fundamental task in autonomous driving, robotics, virtual reality. Monocular depth estimation is attracting research due to the efficiency of predicting depth map from a single RGB image. However, Monocular depth estimation is an ill-posed problem and is sensitive to image compositions such as light condition, occlusion, noise. We propose an encoder-decoder based network that uses multi-level attention and aggregate densely weighted feature map. Our model is evaluated on NYU Depth v2. Experimental results demonstrated that our model achieves promising performance.},
-  preview={MFMA.png}
+  preview={MFMA.png},
+  hover_preview={MFMA.png}
 }
