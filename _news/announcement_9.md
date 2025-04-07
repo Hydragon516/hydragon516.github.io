@@ -7,5 +7,5 @@ related_posts: false
 
 🗽 Presented at CVPR 2025, Nashville, Tennessee, USA.
 
-- [CVPR 2025] Effective SAM Combination for Open-Vocabulary Semantic Segmentation - Oral (3.3% of the accepted papers)
+- [CVPR 2025] Effective SAM Combination for Open-Vocabulary Semantic Segmentation - **<span style="color:red"> Oral presentation! </span>**
 - [CVPR 2025] CoCoGaussian: Leveraging Circle of Confusion for Gaussian Splatting from Defocused Images
