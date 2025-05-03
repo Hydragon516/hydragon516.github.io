@@ -1,9 +1,20 @@
+@inproceedings{cho2025treating,
+  title={[TCSVT 2025] Treating Motion as Option with Output Selection for Unsupervised Video Object Segmentation},
+  author={Cho, Suhwan and Lee, Minhyeok and Lee, Jungho and Cho, MyeongAh and Park, Seungwook and Kim, Jaeyeob and Jang, Hyunsung and Lee, Sangyoun},
+  year={2025},
+  arxiv={2309.14786},
+  code={https://github.com/suhwan-cho/TMO},
+  abstract={Unsupervised video object segmentation aims to detect the most salient object in a video without any external guidance regarding the object. Salient objects often exhibit distinctive movements compared to the background, and recent methods leverage this by combining motion cues from optical flow maps with appearance cues from RGB images. However, because optical flow maps are often closely correlated with segmentation masks, networks can become overly dependent on motion cues during training, leading to vulnerability when faced with confusing motion cues and resulting in unstable predictions. To address this challenge, we propose a novel motion-as-option network that treats motion cues as an optional component rather than a necessity. During training, we randomly input RGB images into the motion encoder instead of optical flow maps, which implicitly reduces the network's reliance on motion cues. This design ensures that the motion encoder is capable of processing both RGB images and optical flow maps, leading to two distinct predictions depending on the type of input provided. To make the most of this flexibility, we introduce an adaptive output selection algorithm that determines the optimal prediction during testing.},
+  preview={TMO++.png},
+  hover_preview={TMO++.png}
+}
+
 @inproceedings{lee2025sparse,
   title={[TPAMI 2025] Sparse-DeRF: Deblurred Neural Radiance Fields from Sparse View},
   author={Lee, Dogyoon and Kim, Donghyeong and Lee, Jungho and Lee, Minhyeok and Lee, Seunghoon and Lee, Sangyoun},
   year={2025},
   arxiv={2407.06613},
-  code={https://dogyoonlee.github.io/sparsederf/},
+  code={https://dogyoonlee.github.io/sparsederf},
   abstract={Recent studies construct deblurred neural radiance fields (DeRF) using dozens of blurry images, which are not practical scenarios if only a limited number of blurry images are available. This paper focuses on constructing DeRF from sparse-view for more pragmatic real-world scenarios. As observed in our experiments, establishing DeRF from sparse views proves to be a more challenging problem due to the inherent complexity arising from the simultaneous optimization of blur kernels and NeRF from sparse view. Sparse-DeRF successfully regularizes the complicated joint optimization, presenting alleviated overfitting artifacts and enhanced quality on radiance fields. The regularization consists of three key components: Surface smoothness, helps the model accurately predict the scene structure utilizing unseen and additional hidden rays derived from the blur kernel based on statistical tendencies of real-world; Modulated gradient scaling, helps the model adjust the amount of the backpropagated gradient according to the arrangements of scene objects; Perceptual distillation improves the perceptual quality by overcoming the ill-posed multi-view inconsistency of image deblurring and distilling the pre-filtered information, compensating for the lack of clean information in blurry images. We demonstrate the effectiveness of the Sparse-DeRF with extensive quantitative and qualitative experimental results by training DeRF from 2-view, 4-view, and 6-view blurry images.},
   preview={Sparse-DeRF1.mp4},
   hover_preview={Sparse-DeRF2.mp4}
