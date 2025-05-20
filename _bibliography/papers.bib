@@ -76,24 +76,24 @@
   hover_preview={FFF_VDI2.mp4}
 }
 
-@article{lee2024crim,
-  title={CRiM-GS: Continuous Rigid Motion-Aware Gaussian Splatting from Motion-Blurred Images},
+@article{lee2024como,
+  title={CoMoGaussian: Continuous Motion-Aware Gaussian Splatting from Motion-Blurred Images},
   author={Lee, Jungho and Kim, Donghyeong and Lee, Dogyoon and Cho, Suhwan and Lee, Minhyeok and Lee, Sangyoun},
-  journal={arXiv preprint arXiv:2407.03923},
+  journal={arXiv preprint arXiv:2503.05332},
   year={2024},
-  arxiv={2407.03923},
-  code={https://github.com/Jho-Yonsei/CRiM-GS},
-  abstract={Neural radiance fields (NeRFs) have received significant attention due to their high-quality novel view rendering ability, prompting research to address various real-world cases. One critical challenge is the camera motion blur caused by camera movement during exposure time, which prevents accurate 3D scene reconstruction. In this study, we propose continuous rigid motion-aware gaussian splatting (CRiM-GS) to reconstruct accurate 3D scene from blurry images with real-time rendering speed. Considering the actual camera motion blurring process, which consists of complex motion patterns, we predict the continuous movement of the camera based on neural ordinary differential equations (ODEs). Specifically, we leverage rigid body transformations to model the camera motion with proper regularization, preserving the shape and size of the object. Furthermore, we introduce a continuous deformable 3D transformation in the \textit{SE(3)} field to adapt the rigid body transformation to real-world problems by ensuring a higher degree of freedom. By revisiting fundamental camera theory and employing advanced neural network training techniques, we achieve accurate modeling of continuous camera trajectories. We conduct extensive experiments, demonstrating state-of-the-art performance both quantitatively and qualitatively on benchmark datasets.},
+  arxiv={2503.05332},
+  code={https://github.com/Jho-Yonsei/CoMoGaussian},
+  abstract={3D Gaussian Splatting (3DGS) has gained significant attention for their high-quality novel view rendering, motivating research to address real-world challenges. A critical issue is the camera motion blur caused by movement during exposure, which hinders accurate 3D scene reconstruction. In this study, we propose CoMoGaussian, a Continuous Motion-Aware Gaussian Splatting that reconstructs precise 3D scenes from motion-blurred images while maintaining real-time rendering speed. Considering the complex motion patterns inherent in real-world camera movements, we predict continuous camera trajectories using neural ordinary differential equations (ODEs). To ensure accurate modeling, we employ rigid body transformations, preserving the shape and size of the object but rely on the discrete integration of sampled frames. To better approximate the continuous nature of motion blur, we introduce a continuous motion refinement (CMR) transformation that refines rigid transformations by incorporating additional learnable parameters. By revisiting fundamental camera theory and leveraging advanced neural ODE techniques, we achieve precise modeling of continuous camera trajectories, leading to improved reconstruction accuracy. Extensive experiments demonstrate state-of-the-art performance both quantitatively and qualitatively on benchmark datasets, which include a wide range of motion blur scenarios, from moderate to extreme blur.},
   preview={CRiM-GS.png},
   hover_preview={CRiM-GS.png}
 }
 
 @article{lee2024smurf,
-  title={SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields},
+  title={[CVPRW 2025] SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields},
   author={Lee, Jungho and Lee, Dogyoon and Lee, Minhyeok and Kim, Donghyung and Lee, Sangyoun},
   journal={arXiv preprint arXiv:2403.07547},
   abstract={Neural radiance fields (NeRF) has attracted considerable attention for their exceptional ability in synthesizing novel views with high fidelity. However, the presence of motion blur, resulting from slight camera movements during extended shutter exposures, poses a significant challenge, potentially compromising the quality of the reconstructed 3D scenes. While recent studies have addressed this issue, they do not consider the continuous dynamics of camera movements during image acquisition, leading to inaccurate scene reconstruction. Additionally, these methods are plagued by slow training and rendering speed. To effectively handle these issues, we propose sequential motion understanding radiance fields (SMURF), a novel approach that employs neural ordinary differential equation (Neural-ODE) to model continuous camera motion and leverages the explicit volumetric representation method for faster training and robustness to motion-blurred input images. The core idea of the SMURF is continuous motion blurring kernel (CMBK), a unique module designed to model a continuous camera movements for processing blurry inputs. Our model, rigorously evaluated against benchmark datasets, demonstrates state-of-the-art performance both quantitatively and qualitatively.},
-  year={2024},
+  year={2025},
   arxiv={2403.07547},
   code={https://github.com/Jho-Yonsei/SMURF},
   preview={SMURF.png},
