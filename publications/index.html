@@ -775,6 +775,99 @@
         </div>
       </div>
 </li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-8 preview" onmouseover="
+       /* 
+         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
+         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (defItem &amp;&amp; hovItem 
+           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
+           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.currentTime = defItem.currentTime;
+         hovItem.play();
+       }
+       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
+       if(hovItem) hovItem.style.display='block';
+       if(defItem) defItem.style.display='none';
+     " onmouseout="
+       /* 
+         1) hover-item(호버 미리보기) 정지 
+         2) 기본 미리보기 다시 노출
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.pause();
+       }
+       if(hovItem) hovItem.style.display='none';
+       if(defItem) defItem.style.display='block';
+     ">
+<!-- 내부 이미지 (기본 미리보기) -->
+                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SMURF.png">
+
+                
+                    <!-- 내부 이미지 (호버) -->
+                    <img class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SMURF.png" style="display:none;">
+                  
+                </div>
+
+        <!-- Entry bib key -->
+        <div id="lee2024smurf" class="col-sm-6">
+        <!-- Title -->
+        <div class="title">[CVPRW 2025] SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Jungho Lee, Dogyoon Lee, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Donghyung Kim, Sangyoun Lee' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>arXiv preprint arXiv:2403.07547</em>, 2025
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2403.07547" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/Jho-Yonsei/SMURF" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Neural radiance fields (NeRF) has attracted considerable attention for their exceptional ability in synthesizing novel views with high fidelity. However, the presence of motion blur, resulting from slight camera movements during extended shutter exposures, poses a significant challenge, potentially compromising the quality of the reconstructed 3D scenes. While recent studies have addressed this issue, they do not consider the continuous dynamics of camera movements during image acquisition, leading to inaccurate scene reconstruction. Additionally, these methods are plagued by slow training and rendering speed. To effectively handle these issues, we propose sequential motion understanding radiance fields (SMURF), a novel approach that employs neural ordinary differential equation (Neural-ODE) to model continuous camera motion and leverages the explicit volumetric representation method for faster training and robustness to motion-blurred input images. The core idea of the SMURF is continuous motion blurring kernel (CMBK), a unique module designed to model a continuous camera movements for processing blurry inputs. Our model, rigorously evaluated against benchmark datasets, demonstrates state-of-the-art performance both quantitatively and qualitatively.</p>
+          </div>
+        </div>
+      </div>
+</li>
 </ol>
 
   <h2 class="year">2024</h2>
@@ -821,9 +914,9 @@
                 </div>
 
         <!-- Entry bib key -->
-        <div id="lee2024crim" class="col-sm-6">
+        <div id="lee2024como" class="col-sm-6">
         <!-- Title -->
-        <div class="title">CRiM-GS: Continuous Rigid Motion-Aware Gaussian Splatting from Motion-Blurred Images</div>
+        <div class="title">CoMoGaussian: Continuous Motion-Aware Gaussian Splatting from Motion-Blurred Images</div>
         <!-- Author -->
         <div class="author">
         
@@ -847,7 +940,7 @@
         
         
         <div class="periodical">
-          <em>arXiv preprint arXiv:2407.03923</em>, 2024
+          <em>arXiv preprint arXiv:2503.05332</em>, 2024
         </div>
         <div class="periodical">
           
@@ -856,8 +949,8 @@
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2407.03923" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-            <a href="https://github.com/Jho-Yonsei/CRiM-GS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="http://arxiv.org/abs/2503.05332" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/Jho-Yonsei/CoMoGaussian" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
           </div>
           
           <div class="badges">
@@ -867,100 +960,7 @@
 
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
-            <p>Neural radiance fields (NeRFs) have received significant attention due to their high-quality novel view rendering ability, prompting research to address various real-world cases. One critical challenge is the camera motion blur caused by camera movement during exposure time, which prevents accurate 3D scene reconstruction. In this study, we propose continuous rigid motion-aware gaussian splatting (CRiM-GS) to reconstruct accurate 3D scene from blurry images with real-time rendering speed. Considering the actual camera motion blurring process, which consists of complex motion patterns, we predict the continuous movement of the camera based on neural ordinary differential equations (ODEs). Specifically, we leverage rigid body transformations to model the camera motion with proper regularization, preserving the shape and size of the object. Furthermore, we introduce a continuous deformable 3D transformation in the \textitSE(3) field to adapt the rigid body transformation to real-world problems by ensuring a higher degree of freedom. By revisiting fundamental camera theory and employing advanced neural network training techniques, we achieve accurate modeling of continuous camera trajectories. We conduct extensive experiments, demonstrating state-of-the-art performance both quantitatively and qualitatively on benchmark datasets.</p>
-          </div>
-        </div>
-      </div>
-</li>
-<li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-8 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 이미지 (기본 미리보기) -->
-                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SMURF.png">
-
-                
-                    <!-- 내부 이미지 (호버) -->
-                    <img class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/SMURF.png" style="display:none;">
-                  
-                </div>
-
-        <!-- Entry bib key -->
-        <div id="lee2024smurf" class="col-sm-6">
-        <!-- Title -->
-        <div class="title">SMURF: Continuous Dynamics for Motion-Deblurring Radiance Fields</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Jungho Lee, Dogyoon Lee, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, and
-          <span class="more-authors" title="click to view 2 more authors" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '2 more authors' ? 'Donghyung Kim, Sangyoun Lee' : '2 more authors';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">2 more authors</span>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>arXiv preprint arXiv:2403.07547</em>, 2024
-        </div>
-        <div class="periodical">
-          
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2403.07547" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-            <a href="https://github.com/Jho-Yonsei/SMURF" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
-          </div>
-          
-          <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Neural radiance fields (NeRF) has attracted considerable attention for their exceptional ability in synthesizing novel views with high fidelity. However, the presence of motion blur, resulting from slight camera movements during extended shutter exposures, poses a significant challenge, potentially compromising the quality of the reconstructed 3D scenes. While recent studies have addressed this issue, they do not consider the continuous dynamics of camera movements during image acquisition, leading to inaccurate scene reconstruction. Additionally, these methods are plagued by slow training and rendering speed. To effectively handle these issues, we propose sequential motion understanding radiance fields (SMURF), a novel approach that employs neural ordinary differential equation (Neural-ODE) to model continuous camera motion and leverages the explicit volumetric representation method for faster training and robustness to motion-blurred input images. The core idea of the SMURF is continuous motion blurring kernel (CMBK), a unique module designed to model a continuous camera movements for processing blurry inputs. Our model, rigorously evaluated against benchmark datasets, demonstrates state-of-the-art performance both quantitatively and qualitatively.</p>
+            <p>3D Gaussian Splatting (3DGS) has gained significant attention for their high-quality novel view rendering, motivating research to address real-world challenges. A critical issue is the camera motion blur caused by movement during exposure, which hinders accurate 3D scene reconstruction. In this study, we propose CoMoGaussian, a Continuous Motion-Aware Gaussian Splatting that reconstructs precise 3D scenes from motion-blurred images while maintaining real-time rendering speed. Considering the complex motion patterns inherent in real-world camera movements, we predict continuous camera trajectories using neural ordinary differential equations (ODEs). To ensure accurate modeling, we employ rigid body transformations, preserving the shape and size of the object but rely on the discrete integration of sampled frames. To better approximate the continuous nature of motion blur, we introduce a continuous motion refinement (CMR) transformation that refines rigid transformations by incorporating additional learnable parameters. By revisiting fundamental camera theory and leveraging advanced neural ODE techniques, we achieve precise modeling of continuous camera trajectories, leading to improved reconstruction accuracy. Extensive experiments demonstrate state-of-the-art performance both quantitatively and qualitatively on benchmark datasets, which include a wide range of motion blur scenarios, from moderate to extreme blur.</p>
           </div>
         </div>
       </div>
