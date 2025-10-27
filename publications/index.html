@@ -442,7 +442,7 @@
         <!-- Entry bib key -->
         <div id="cho2025find" class="col-sm-6">
         <!-- Title -->
-        <div class="title">Find First, Track Next: Decoupling Identification and Propagation in Referring Video Object Segmentation</div>
+        <div class="title">[ICCVW 2025] Find First, Track Next: Decoupling Identification and Propagation in Referring Video Object Segmentation</div>
         <!-- Author -->
         <div class="author">
         
@@ -487,6 +487,192 @@
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
             <p>Referring video object segmentation aims to segment and track a target object in a video using a natural language prompt. Existing methods typically fuse visual and textual features in a highly entangled manner, processing multi-modal information together to generate per-frame masks. However, this approach often struggles with ambiguous target identification, particularly in scenes with multiple similar objects, and fails to ensure consistent mask propagation across frames. To address these limitations, we introduce FindTrack, a novel decoupled framework that separates target identification from mask propagation. FindTrack first adaptively selects a key frame by balancing segmentation confidence and vision-text alignment, establishing a robust reference for the target object. This reference is then utilized by a dedicated propagation module to track and segment the object across the entire video. By decoupling these processes, FindTrack effectively reduces ambiguities in target association and enhances segmentation consistency. We demonstrate that FindTrack outperforms existing methods on public benchmarks.</p>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-8 preview" onmouseover="
+       /* 
+         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
+         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (defItem &amp;&amp; hovItem 
+           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
+           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.currentTime = defItem.currentTime;
+         hovItem.play();
+       }
+       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
+       if(hovItem) hovItem.style.display='block';
+       if(defItem) defItem.style.display='none';
+     " onmouseout="
+       /* 
+         1) hover-item(호버 미리보기) 정지 
+         2) 기본 미리보기 다시 노출
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.pause();
+       }
+       if(hovItem) hovItem.style.display='none';
+       if(defItem) defItem.style.display='block';
+     ">
+<!-- 내부 이미지 (기본 미리보기) -->
+                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/DepthFlow.png">
+
+                
+                    <!-- 내부 이미지 (호버) -->
+                    <img class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/DepthFlow.png" style="display:none;">
+                  
+                </div>
+
+        <!-- Entry bib key -->
+        <div id="cho2025depthflow" class="col-sm-6">
+        <!-- Title -->
+        <div class="title">[ICCVW 2025] DepthFlow: Exploiting Depth-Flow Structural Correlations for Unsupervised Video Object Segmentation</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Suhwan Cho, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, Jungho Lee, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Donghyeong Kim, Sangyoun Lee' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In Proceedings of the IEEE/CVF International Conference on Computer Vision</em>, 2025
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2507.19790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/suhwan-cho/DepthFlow" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>In unsupervised VOS, the scarcity of training data has been a significant bottleneck in achieving high segmentation accuracy. Inspired by observations on two-stream approaches, we introduce a novel data generation method based on the depth-to-flow conversion process. With our flow synthesis protocol, large-scale image-flow-mask triplets can be leveraged during network training. To facilitate future research, we also prepare the DUTSv2 dataset that includes pairs of original images and their corresponding synthetic flow maps.</p>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-8 preview" onmouseover="
+       /* 
+         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
+         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (defItem &amp;&amp; hovItem 
+           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
+           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.currentTime = defItem.currentTime;
+         hovItem.play();
+       }
+       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
+       if(hovItem) hovItem.style.display='block';
+       if(defItem) defItem.style.display='none';
+     " onmouseout="
+       /* 
+         1) hover-item(호버 미리보기) 정지 
+         2) 기본 미리보기 다시 노출
+       */
+       var defItem = this.querySelector('.default-item');
+       var hovItem = this.querySelector('.hover-item');
+       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
+         hovItem.pause();
+       }
+       if(hovItem) hovItem.style.display='none';
+       if(defItem) defItem.style.display='block';
+     ">
+<!-- 내부 이미지 (기본 미리보기) -->
+                <img class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TransFlow.png">
+
+                
+                    <!-- 내부 이미지 (호버) -->
+                    <img class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/TransFlow.png" style="display:none;">
+                  
+                </div>
+
+        <!-- Entry bib key -->
+        <div id="cho2025transflow" class="col-sm-6">
+        <!-- Title -->
+        <div class="title">[ICCVW 2025] TransFlow: Motion Knowledge Transfer from Video Diffusion Models to Video Salient Object Detection</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Suhwan Cho, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, Jungho Lee, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Sunghun Yang, Sangyoun Lee' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In Proceedings of the IEEE/CVF International Conference on Computer Vision</em>, 2025
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+            <a href="http://arxiv.org/abs/2507.19789" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="https://github.com/suhwan-cho/TransFlow" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Leveraging large-scale image datasets is a common strategy in video processing tasks. However, motion-guided approaches are limited in this regard, as spatial distortions cannot effectively simulate realistic motion dynamics. In this study, we demonstrate that image-to-video generation models can generate realistic optical flows by appropriately transforming static images. Our synthetic video dataset, DUTS-Video, offers valuable potential for future research.</p>
           </div>
         </div>
       </div>
