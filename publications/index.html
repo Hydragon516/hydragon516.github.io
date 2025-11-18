@@ -115,101 +115,7 @@
             <!-- _pages/publications.md -->
 <div class="publications">
   <h2 class="year">2026</h2>
-  <ol class="bibliography"><li>
-<!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-8 preview" onmouseover="
-       /* 
-         1) default-item(기본 미리보기), hover-item(호버 미리보기) 찾기 
-         2) 둘 다 video 태그이면(동영상이라면) 시간을 맞추고 hover 영상 재생
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (defItem &amp;&amp; hovItem 
-           &amp;&amp; defItem.tagName.toLowerCase() === 'video'
-           &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.currentTime = defItem.currentTime;
-         hovItem.play();
-       }
-       /* 기본 미리보기 숨기고, 호버 미리보기 노출 */
-       if(hovItem) hovItem.style.display='block';
-       if(defItem) defItem.style.display='none';
-     " onmouseout="
-       /* 
-         1) hover-item(호버 미리보기) 정지 
-         2) 기본 미리보기 다시 노출
-       */
-       var defItem = this.querySelector('.default-item');
-       var hovItem = this.querySelector('.hover-item');
-       if (hovItem &amp;&amp; hovItem.tagName.toLowerCase() === 'video') {
-         hovItem.pause();
-       }
-       if(hovItem) hovItem.style.display='none';
-       if(defItem) defItem.style.display='block';
-     ">
-<!-- 내부 동영상 (기본 미리보기) -->
-                <video class="default-item preview z-depth-1 rounded" src="/assets/img/publication_preview/MonoCLUE1.mp4" loop="" autoplay="" muted="" playsinline="">
-                </video>
-
-                
-                    <!-- 내부 동영상 (호버 미리보기) -->
-                    <video class="hover-item preview z-depth-1 rounded" src="/assets/img/publication_preview/MonoCLUE2.mp4" loop="" muted="" playsinline="" style="display:none;">
-                    </video>
-                  
-                </div>
-
-        <!-- Entry bib key -->
-        <div id="kang2025empower" class="col-sm-6">
-        <!-- Title -->
-        <div class="title">[AAAI 2026] MonoCLUE : Object-Aware Clustering Enhances Monocular 3D Object Detection</div>
-        <!-- Author -->
-        <div class="author">
-        
-
-        Sunghun Yang, <a href="https://scholar.google.co.kr/citations?user=WGchT7cAAAAJ&amp;hl=ko" rel="external nofollow noopener" target="_blank">Minhyeok Lee</a>, Jungho Lee, and
-          <span class="more-authors" title="click to view 1 more author" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '1 more author' ? 'Sangyoun Lee' : '1 more author';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">1 more author</span>
-</div>
-
-        <!-- Journal/Book title and date -->
-        
-        
-        <div class="periodical">
-          <em>arXiv preprint arXiv:2511.07862</em>, 2026
-        </div>
-        <div class="periodical">
-          
-        </div>
-
-          <!-- Links/Buttons -->
-          <div class="links">
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="http://arxiv.org/abs/2511.07862" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
-            <a href="https://github.com/SungHunYang/MonoCLUE" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
-          </div>
-          
-          <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
-              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
-          </div>
-
-          <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>Monocular 3D object detection offers a cost-effective solution for autonomous driving but suffers from ill-posed depth and limited field of view. These constraints cause a lack of geometric cues and reduced accuracy in occluded or truncated scenes. While recent approaches incorporate additional depth information to address geometric ambiguity, they overlook the visual cues crucial for robust recognition. We propose MonoCLUE, which enhances monocular 3D detection by leveraging both local clustering and generalized scene memory of visual features. First, we perform K-means clustering on visual features to capture distinct object-level appearance parts (e.g., bonnet, car roof), improving detection of partially visible objects. The clustered features are propagated across regions to capture objects with similar appearances. Second, we construct a generalized scene memory by aggregating clustered features across images, providing consistent representations that generalize across scenes. This improves object-level feature consistency, enabling stable detection across varying environments. Lastly, we integrate both local cluster features and generalized scene memory into object queries, guiding attention toward informative regions. Exploiting a unified local clustering and generalized scene memory strategy, MonoCLUE enables robust monocular 3D detection under occlusion and limited visibility, achieving state-of-the-art performance on the KITTI benchmark.</p>
-          </div>
-        </div>
-      </div>
-</li></ol>
+  <ol class="bibliography"></ol>
 
   <h2 class="year">2025</h2>
   <ol class="bibliography">
@@ -255,7 +161,7 @@
                 </div>
 
         <!-- Entry bib key -->
-        <div id="kang2025empowes" class="col-sm-6">
+        <div id="kang2025empower" class="col-sm-6">
         <!-- Title -->
         <div class="title">[NeurIPS 2025] Empower Words: DualGround for Structured Phrase and Sentence-Level Temporal Grounding</div>
         <!-- Author -->
